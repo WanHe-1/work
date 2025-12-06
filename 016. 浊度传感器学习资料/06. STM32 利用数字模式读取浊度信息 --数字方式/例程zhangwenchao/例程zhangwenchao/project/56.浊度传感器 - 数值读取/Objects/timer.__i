@@ -1,0 +1,7 @@
+--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\wenchao_lib\inc -I ..\..\core
+-I.\RTE\Device\STM32F103C8
+-I.\RTE\_gpio
+-IE:\code\Keil\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include
+-IE:\code\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d "..\..\wenchao_lib\drive\timer.c"
