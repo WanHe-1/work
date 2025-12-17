@@ -1,73 +1,66 @@
-// Define pins
-const int trigPin = 11;        // Trig pin of the ultrasonic sensor
-const int echoPin = 10;        // Echo pin of the ultrasonic sensor
-const int ledPin = 9;          // LED connected to a PWM pin
+#define TRIG_PIN     11
+#define ECHO_PIN     10
+#define L298N_ENA    9
+#define L298N_IN1    13
+#define L298N_IN2    12
 
-// Define measurement variables
-long duration;                  // Duration of the ultrasonic pulse (round-trip time)
-int distance;                   // Calculated distance in centimeters
+const int minDistance = 20;   // 建议从 20cm 开始（避开盲区）
+const int maxDistance = 50;
 
-// Define distance range (adjust according to your actual setup)
-const int minDistance = 3;     // Minimum valid distance in centimeters
-const int maxDistance = 80;    // Maximum valid distance in centimeters
+int currentBrightness = 0;
+
+int readDistance() {
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);e:\code\study\foc study\foc
+
+  long duration = pulseIn(ECHO_PIN, HIGH, 25000); // 25ms timeout
+
+  if (duration == 0) {
+    // 无回波 → 物体极近（< 3cm），视为 2cm
+    return 2;
+  }
+  return (int)(duration * 0.0343 / 2);
+}
 
 void setup() {
-  // Initialize serial communication for debugging
-  Serial.begin(9600);
-  
-  // Set pin modes
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(ledPin, OUTPUT);
-  
-  // Initialize LED (optional: turn fully on at start)
-  analogWrite(ledPin, 255);
+  Serial.begin(115200);
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  pinMode(L298N_ENA, OUTPUT);
+  pinMode(L298N_IN1, OUTPUT);
+  pinMode(L298N_IN2, OUTPUT);
+  digitalWrite(L298N_IN1, HIGH);
+  digitalWrite(L298N_IN2, LOW);
 }
 
 void loop() {
-  // 1. Send a 10-microsecond ultrasonic pulse
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);        // Ensure low level for at least 2 microseconds
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);       // Send a 10-microsecond high pulse
-  digitalWrite(trigPin, LOW);
-  
-  // 2. Read the duration of the high pulse on the Echo pin
-  duration = pulseIn(echoPin, HIGH);
-  
-  // 3. Convert time to distance in centimeters
-  // Speed of sound is approximately 343 m/s (34300 cm/s)
-  // Distance = (duration * speed of sound) / 2 (round-trip)
-  distance = duration * 0.0343 / 2;
+  int distance = (readDistance() + readDistance()) / 2;
 
-  // Print distance to serial monitor
-  Serial.print(distance);
-  Serial.println(" cm");
-  delay(10);
-
-  int brightness;
-  
-  // 4. Determine LED brightness based on distance
-  if (distance < minDistance) {
-    // Object is too close, set LED to dimmest (almost off)
-    brightness = 255;
-  } else if (distance > maxDistance) {
-    // Object is too far, set LED to brightest
-    brightness = 0;
+  int targetBrightness;
+  if (distance <= minDistance) {
+    targetBrightness = 255;   // 很近 → 最亮
+  } else if (distance >= maxDistance) {
+    targetBrightness = 0;     // 很远 → 熄灭
   } else {
-    // Map distance to brightness value (inverted: closer = brighter)
-    brightness = map(distance, minDistance, maxDistance, 255, 0);
-    
-    // Ensure brightness stays within valid range [0, 255]
-    brightness = constrain(brightness, 0, 255);
+    targetBrightness = map(distance, minDistance, maxDistance, 255, 0);
   }
-  
-  // 5. Set LED brightness using PWM
-  analogWrite(ledPin, brightness);
-  
-  // Print brightness value for debugging
-  Serial.println(brightness);
 
-  // Delay between measurements
-  delay(100);
+  // 快速平滑
+  int diff = targetBrightness - currentBrightness;
+  if (diff > 15) currentBrightness += 15;
+  else if (diff < -15) currentBrightness -= 15;
+  else currentBrightness = targetBrightness;
+
+  analogWrite(L298N_ENA, currentBrightness);
+
+  // 打印调试
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.print(" cm | Brightness: ");
+  Serial.println(currentBrightness);
+
+  delay(10);
 }
