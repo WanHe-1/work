@@ -1,0 +1,33 @@
+// 定义6个红外传感器连接的引脚
+const int sensorPins[6] = {2, 3, 4, 5, 6, 7};
+
+void setup() {
+  Serial.begin(9600); // 初始化串口通信
+
+  // 设置所有传感器引脚为输入
+  for (int i = 0; i < 6; i++) {
+    pinMode(sensorPins[i], INPUT);
+  }
+}
+
+void loop() {
+  bool anyTriggered = false;
+
+  // 依次检查每个传感器
+  for (int i = 0; i < 6; i++) {
+    // 注意：有些红外模块在检测到障碍时输出 LOW，有些是 HIGH
+    // 根据你的模块调整判断条件（这里假设检测到物体时为 LOW）
+    if (digitalRead(sensorPins[i]) == LOW) {
+      Serial.println(i + 1); // 输出 1 到 6
+      anyTriggered = true;
+      delay(100); // 防止重复快速输出（可选）
+    }
+  }
+
+  // 可选：如果没有传感器触发，输出 0 或什么都不做
+  // if (!anyTriggered) {
+  //   Serial.println(0);
+  // }
+
+  delay(50); // 主循环小延时，避免过快读取
+}
