@@ -14,7 +14,7 @@ int readDistance() {
   delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH);
   delayMicroseconds(10);
-  digitalWrite(TRIG_PIN, LOW);e:\code\study\foc study\foc
+  digitalWrite(TRIG_PIN, LOW);
 
   long duration = pulseIn(ECHO_PIN, HIGH, 25000); // 25ms timeout
 

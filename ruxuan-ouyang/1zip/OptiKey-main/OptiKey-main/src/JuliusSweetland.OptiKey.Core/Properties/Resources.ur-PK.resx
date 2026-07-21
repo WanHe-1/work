@@ -1,0 +1,2373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADD_DICTIONARY_ENTRY" xml:space="preserve">
+    <value>شامل  کرو</value>
+  </data>
+  <data name="ADD_NEW_ENTRY_TO_DICTIONARY" xml:space="preserve">
+    <value>نیا اندراج</value>
+  </data>
+  <data name="ADD_PHRASE_TO_DICTIONARY_CONFIRMATION_MESSAGE" xml:space="preserve">
+    <value>کیا  اپ  شامل  کرنا  چاہیں  گے  فقرہ {0} کو لغات میں اس شارٹ کٹ {1}کے  ساتھ؟</value>
+  </data>
+  <data name="ADD_TO_DICTIONARY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>شامل کرو 
+ لغات میں</value>
+  </data>
+  <data name="ADD_WORD_TO_DICTIONARY_CONFIRMATION_MESSAGE" xml:space="preserve">
+    <value>کیا آپ شامل کرنا چاہیں گے لفظ {0}کولغات میں؟</value>
+  </data>
+  <data name="ADDED" xml:space="preserve">
+    <value>شامل  کر دیا</value>
+  </data>
+  <data name="ADJUST_BY" xml:space="preserve">
+    <value>{0} پکسل سے  بڑا /چھوٹا کریںl|{0} پکسلوں سے  بڑا /چھوٹا کریں</value>
+  </data>
+  <data name="ALPHA_1" xml:space="preserve">
+    <value> حروف ۱</value>
+  </data>
+  <data name="ALT" xml:space="preserve">
+    <value>ALT</value>
+  </data>
+  <data name="ANDROID_DARK" xml:space="preserve">
+    <value> گاڑھا اینڈروئیڈ </value>
+  </data>
+  <data name="ANDROID_LIGHT" xml:space="preserve">
+    <value>  ہلکا اینڈروئیڈ </value>
+  </data>
+  <data name="ANDROID_TWO_TONE" xml:space="preserve">
+    <value>دو رنگا اینڈروئیڈ </value>
+  </data>
+  <data name="AUTO_CAPITALISE_WORDS_LABEL" xml:space="preserve">
+    <value>خود کار طریقے سے الفاظ کے پہلے حرف کوبڑا کریں:</value>
+  </data>
+  <data name="SUGGEST_WORDS_LABEL" xml:space="preserve">
+    <value>خود کار طریقے سے الفاظ کو مکمل کرو:</value>
+  </data>
+  <data name="AUTO_SENTENCE_ADJUSTMENTS" xml:space="preserve">
+    <value>جملوں کی خود کار رد و بدل </value>
+  </data>
+  <data name="AUTO_SPACE_BETWEEN_WORDS_LABEL" xml:space="preserve">
+    <value>الفاظ کے درمیان خود بخود خالی جگہ رکھو</value>
+  </data>
+  <data name="BACK_TITLE_CASE" xml:space="preserve">
+    <value>واپس</value>
+  </data>
+  <data name="BACK" xml:space="preserve">
+    <value>واپس</value>
+  </data>
+  <data name="BACK_ONE_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>واپس
+ایک</value>
+  </data>
+  <data name="BACK_WORD_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>واپس
+لفظ</value>
+  </data>
+  <data name="BASS_UNABLE_TO_CREATE_STREAM_FROM_FILE" xml:space="preserve">
+    <value>باس فائل '{0}' سے  مواد حاصل کرنے میں ناکام رہا</value>
+  </data>
+  <data name="BOTTOM" xml:space="preserve">
+    <value>بالکل نیچے</value>
+  </data>
+  <data name="BREAK" xml:space="preserve">
+    <value> رکو BREAK</value>
+  </data>
+  <data name="CALIBRATION_ABORT_MESSAGE" xml:space="preserve">
+    <value>طریقۂ پیمائش (calibration) اس پیغام کے ساتھ بند کر دیا گیا: '{0}'</value>
+  </data>
+  <data name="CALIBRATION_CONFIRMATION_MESSAGE" xml:space="preserve">
+    <value>کیا آپ واقعی دوبارہ  پیمائش (Calibrate) کرنا چاہتے ہیں؟</value>
+  </data>
+  <data name="CALIBRATION_ERROR_MESSAGE" xml:space="preserve">
+    <value>طریقۂ پیمائش کے دوران ایک خرابی واقع ہوئی. پیغام: '{0}'</value>
+  </data>
+  <data name="CALIBRATION_FAIL_MESSAGE" xml:space="preserve">
+    <value>پیمائش کا طریقہ (calibration) ناکام ہوگیاھے: '{0}'</value>
+  </data>
+  <data name="CALIBRATION_REQUIRES_MANUAL_INTERACTION" xml:space="preserve">
+    <value>پیمائش کا طریقہ کار (calibration) دستی مداخلت کے بغیر مکمل نہیں کیا جا سکتا، مثال کے طور پر ماؤس کا استعمال- ممکن ہے آپ پیمائش کے عمل میں پھنس گئے  ہوں اگر آپ اپنے کمپیوٹر سے رابطہ نہیں قائم کرسکتے- آپ کو یقین ہے کہ آپ دوبارہ  پیمائش (calibration) شروع کرنا چاہتے ہیں؟</value>
+  </data>
+  <data name="CALIBRATION_STOPPED_MESSAGE" xml:space="preserve">
+    <value> پیمانہ بندی کا عمل (calibration) ایک نامعلوم وجہ  کی بنا پہ رک گیا ہے- پیغام: '{0}'</value>
+  </data>
+  <data name="CALIBRATION_SUCCESS_WITH_ACCURACY" xml:space="preserve">
+    <value>پیمانہ بندی کامیاب  رہی! درستگی (اوسط  غلطی ڈگری/درجہ = {0})</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>تنسیخ</value>
+  </data>
+  <data name="CAPTURE_TIMEOUT_LABEL" xml:space="preserve">
+    <value>فیصلے کی مہلت کا وقفہ (ملی سیکنڈ):</value>
+  </data>
+  <data name="CHECK_FOR_UPDATES_AT_STARTUP_LABEL" xml:space="preserve">
+    <value>شروع  کرتے ہوئے updates (تازہ ترین شکل) کی جانچ پڑتال کریں:</value>
+  </data>
+  <data name="CLEAR" xml:space="preserve">
+    <value>صاف کر دو (CLEAR) </value>
+  </data>
+  <data name="CLICK_AND_DRAG_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>CLICK کلک کریں
+اور گھسیٹیں DRAG</value>
+  </data>
+  <data name="CLICK_SOUND_1" xml:space="preserve">
+    <value>1 پر کلک کریں</value>
+  </data>
+  <data name="CLICK_SOUND_2" xml:space="preserve">
+    <value>2 پر کلک کریں</value>
+  </data>
+  <data name="CLICK_SOUND_3" xml:space="preserve">
+    <value>3 پر کلک کریں</value>
+  </data>
+  <data name="CLICK_SOUND_4" xml:space="preserve">
+    <value>4 پر کلک کریں</value>
+  </data>
+  <data name="CLICK_SOUND_5" xml:space="preserve">
+    <value>5 پر کلک کریں</value>
+  </data>
+  <data name="CLICK_SOUND_6" xml:space="preserve">
+    <value>6 پر کلک کریں</value>
+  </data>
+  <data name="COLLAPSE_DOCK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>انہدام/ نا کامی
+ احاطہ DOCK</value>
+  </data>
+  <data name="COLLAPSED_DOCK_THICKNESS" xml:space="preserve">
+    <value>منہدم احاطہ Dock کی چوڑائی  (مکمل احاطہ کی چوڑائی کا فیصد ):</value>
+  </data>
+  <data name="CONTEXTUAL_MENU_KEY" xml:space="preserve">
+    <value>فہرست</value>
+  </data>
+  <data name="CONVERSATION" xml:space="preserve">
+    <value>گفتگو</value>
+  </data>
+  <data name="CONVERSATION_LAYOUT" xml:space="preserve">
+    <value>گفتگو کے حروف</value>
+  </data>
+  <data name="CONVERSATION_NUM_SYM_LAYOUT" xml:space="preserve">
+    <value>گفتگو نمبر اور علامات</value>
+  </data>
+  <data name="CONVERSATION_ONLY_MODE_LABEL" xml:space="preserve">
+    <value>گفتگو کی حالت:</value>
+  </data>
+  <data name="CORRUPTED_SETTINGS_MESSAGE" xml:space="preserve">
+    <value>آپٹیکی نے پتہ لگایا ہے کہ آپ کی صارف کی ترتیبات user settings کی فائل خراب ہوگئی ہے اور اس کی مرمت کی جائے گی- یہ کام ایک پرانا نسخہ (version)، یا ایک ڈیفالٹ نسخے کو بحال کرکے کیا جائے گا اگر پرانا نسخہ نہ ملا-
+
+ اپنی ترتیبات settings کو دوبارہ ترتیب دینے اور آپٹیکی کو دوبارہ شروع کرنے کے لئے ہاں Yes کلک کریں-
+
+بند کرنے کے لئے نہیں No کو کلک کریں  تا کہ آپ مرمت کر سکیں یا اپنے صارف کی ترتیبات settings کی فائل کی نقل کر لیں-</value>
+  </data>
+  <data name="CORRUPTED_SETTINGS_TITLE" xml:space="preserve">
+    <value>اوہ! لگتا ہےصارف کی ترتیبات settings کی فائل  مسخ ہوگئی ہے-</value>
+  </data>
+  <data name="CRASH_MESSAGE" xml:space="preserve">
+    <value>بری خبر- آپٹکی لڑکھڑا کر گر گئی ہے جس کی وجہ سے اسے بند کرنا پڑا ہے-
+
+ جو کچھ پیش آیا ہے اس کی تفصیلات ایک ای میل میں درج کر کے بھیج سکیں تو بہت مددگار ثابت ہوگا: crash@optikey.org
+
+ آپ کو جو زحمت اٹھانی پژی اس کے لئے معذرت</value>
+  </data>
+  <data name="CRASH_TITLE" xml:space="preserve">
+    <value>اوہ!</value>
+  </data>
+  <data name="CTRL" xml:space="preserve">
+    <value>CTRL </value>
+  </data>
+  <data name="CURRENCIES" xml:space="preserve">
+    <value>رائج سکے / کرنسی</value>
+  </data>
+  <data name="CURRENCIES_LAYOUT_1" xml:space="preserve">
+    <value>سکہ رائج الوقت / کرنسی 1</value>
+  </data>
+  <data name="CURRENCIES_LAYOUT_2" xml:space="preserve">
+    <value>سکہ رائج الوقت / کرنسی 2</value>
+  </data>
+  <data name="CURSOR_HEIGHT_LABEL" xml:space="preserve">
+    <value>کرسر کی اونچائی (پکسل):</value>
+  </data>
+  <data name="CURSOR_WIDTH_LABEL" xml:space="preserve">
+    <value>کرسر کی چوڑائی (پکسل):</value>
+  </data>
+  <data name="CUSTOM_LAYOUT" xml:space="preserve">
+    <value> متحرک تختی کی فائل Dynamic keyboard file</value>
+  </data>
+  <data name="DANISH_DENMARK" xml:space="preserve">
+    <value>ڈنمارکی (ڈنمارک) / Dansk (Danmark)</value>
+  </data>
+  <data name="DANISH_DENMARK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> ڈنمارکی
+(ڈنمارک) /
+Dansk
+(Danmark)</value>
+  </data>
+  <data name="DEBUGGING_MODE_LABEL" xml:space="preserve">
+    <value>مُشکلات دور کرنے کا طریقہ</value>
+  </data>
+  <data name="DECREASE_OPACITY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>کم کرو
+ دھندلا پن</value>
+  </data>
+  <data name="DEL" xml:space="preserve">
+    <value>DEL</value>
+  </data>
+  <data name="DELETE_DICTIONARY_ENTRY" xml:space="preserve">
+    <value>مٹانا</value>
+  </data>
+  <data name="DIACRITICS" xml:space="preserve">
+    <value>اعراب</value>
+  </data>
+  <data name="DIACRITICS_LAYOUT_1" xml:space="preserve">
+    <value>اعراب 1</value>
+  </data>
+  <data name="DIACRITICS_LAYOUT_2" xml:space="preserve">
+    <value>اعراب 2</value>
+  </data>
+  <data name="DIACRITICS_LAYOUT_3" xml:space="preserve">
+    <value>اعراب 3</value>
+  </data>
+  <data name="DICTIONARY" xml:space="preserve">
+    <value>لغات</value>
+  </data>
+  <data name="DICTIONARY_FILE_NOT_FOUND_ERROR" xml:space="preserve">
+    <value>کوئی مستعمل لغات موجود نہیں ہے اوراولین لغات اس جگہ نہیں مل  سکی '{0}'</value>
+  </data>
+  <data name="DISPLAY_FOR_X_SECONDS_PER_CHARACTER_LABEL" xml:space="preserve">
+    <value>پیغام کے ہر حرف کو X سیکنڈ کےلئے دکھائیں:</value>
+  </data>
+  <data name="DO_AT_CURRENT_LOCATION" xml:space="preserve">
+    <value>موجودہ مقام پر کریں ...</value>
+  </data>
+  <data name="DO_AT_POINT" xml:space="preserve">
+    <value>اس جگہ پر کریں ...</value>
+  </data>
+  <data name="DOWN_ARROW_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>نیچے DOWN
+تیر ARROW</value>
+  </data>
+  <data name="DURATION_FORMAT" xml:space="preserve">
+    <value>({0: #، ###} ملی سیکنڈ)</value>
+  </data>
+  <data name="END" xml:space="preserve">
+    <value>اختتام END</value>
+  </data>
+  <data name="ENGLISH_CANADA" xml:space="preserve">
+    <value>انگریزی (کینیڈا)</value>
+  </data>
+  <data name="ENGLISH_UK" xml:space="preserve">
+    <value>انگریزی (برطانیہ)</value>
+  </data>
+  <data name="ENGLISH_US" xml:space="preserve">
+    <value>انگریزی (امریکہ)</value>
+  </data>
+  <data name="ENTER" xml:space="preserve">
+    <value>اندراج ENTER </value>
+  </data>
+  <data name="ENTRY_ADDED_TO_DICTIONARY" xml:space="preserve">
+    <value>بہت خوب۔ لغات میں '{0}' شامل  کر دیا گیا ہے.</value>
+  </data>
+  <data name="ERROR_SOUND_LABEL" xml:space="preserve">
+    <value>غلطی:</value>
+  </data>
+  <data name="ESC" xml:space="preserve">
+    <value>ESC</value>
+  </data>
+  <data name="EXPAND" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں</value>
+  </data>
+  <data name="EXPAND_DOCK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں
+ احاطہ DOCK</value>
+  </data>
+  <data name="EXPAND_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+نیچے &amp;  بائیں </value>
+  </data>
+  <data name="EXPAND_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+ نیچے &amp; دایئں  </value>
+  </data>
+  <data name="EXPAND_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+نیچے DOWN</value>
+  </data>
+  <data name="EXPAND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+بائیں</value>
+  </data>
+  <data name="EXPAND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+ دایئں</value>
+  </data>
+  <data name="EXPAND_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+اوپر  اور بائیں</value>
+  </data>
+  <data name="EXPAND_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+اوپر  اور  دایئں</value>
+  </data>
+  <data name="EXPAND_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>وسیع کریں / بڑھائیں
+اوپر UP</value>
+  </data>
+  <data name="FALLING_SOUND_1" xml:space="preserve">
+    <value>گر رہا ہے  1</value>
+  </data>
+  <data name="FALLING_SOUND_2" xml:space="preserve">
+    <value>گر رہا ہے 2 </value>
+  </data>
+  <data name="FILL_PIE" xml:space="preserve">
+    <value>دائرہ بھرنا ( Fill Pie)</value>
+  </data>
+  <data name="FIXATIONS_DWELL" xml:space="preserve">
+    <value> بغور دیکھنا (ٹکٹکی)</value>
+  </data>
+  <data name="FONT" xml:space="preserve">
+    <value>فونٹ</value>
+  </data>
+  <data name="FONT_FAMILY_LABEL" xml:space="preserve">
+    <value>فونٹ گھرانا:</value>
+  </data>
+  <data name="FONT_STRETCH_LABEL" xml:space="preserve">
+    <value> فونٹ کا پھیلاؤ:</value>
+  </data>
+  <data name="FONT_WEIGHT_LABEL" xml:space="preserve">
+    <value>فونٹ کا وزن:</value>
+  </data>
+  <data name="FRENCH_FRANCE" xml:space="preserve">
+    <value>فرانسیسی (فرانس) / فرانسیسی (فرانس)</value>
+  </data>
+  <data name="FULL_DOCK_THICKNESS_LABEL" xml:space="preserve">
+    <value>Dock (احاطہ) کی پوری چوڑائی (اسکرین٪ کے طور پر):</value>
+  </data>
+  <data name="GAZE_TRACKER" xml:space="preserve">
+    <value>نظر کا جائزہ لینے والا آلہ Gaze Tracker</value>
+  </data>
+  <data name="GROW" xml:space="preserve">
+    <value>بڑھو</value>
+  </data>
+  <data name="HOME" xml:space="preserve">
+    <value>گھر HOME</value>
+  </data>
+  <data name="HORIZONTAL_FILL" xml:space="preserve">
+    <value>افقی پھیلاؤ(سکرین % کےطور پر )</value>
+  </data>
+  <data name="INCOMPLETE_KEY_FIXATION_TTL_LABEL" xml:space="preserve">
+    <value>فعال ہونے تک نامکمل کلیدی اصلاح کا وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="INCREASE_OPACITY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>زیادہ کرو
+دھندلا پن </value>
+  </data>
+  <data name="INFO_SOUND_LABEL" xml:space="preserve">
+    <value>معلومات:</value>
+  </data>
+  <data name="INS" xml:space="preserve">
+    <value>INS ( داخل کرنے کی کلید)</value>
+  </data>
+  <data name="INTELLIGENTLY_SUPPRESS_AUTO_CAPS" xml:space="preserve">
+    <value>.....جہاں غیر ضروری لگے وہاں سمجھداری سے آٹو-caps کو غیر فعال بنا دو:</value>
+  </data>
+  <data name="INVALID_KEYBOARD_AND_LANGUAGE_ERROR" xml:space="preserve">
+    <value>موجودہ تختی اور زبان کا مجموعہ درست نہیں ہے</value>
+  </data>
+  <data name="JUMP" xml:space="preserve">
+    <value>چھلانگ</value>
+  </data>
+  <data name="JUMP_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ
+ نیچے&amp; بائیں </value>
+  </data>
+  <data name="JUMP_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ
+نیچے اور دائیں</value>
+  </data>
+  <data name="JUMP_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+نیچے</value>
+  </data>
+  <data name="JUMP_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+بائیں</value>
+  </data>
+  <data name="JUMP_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+دائیں </value>
+  </data>
+  <data name="JUMP_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+اوپر اور بائیں </value>
+  </data>
+  <data name="JUMP_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+اوپر اور دائیں</value>
+  </data>
+  <data name="JUMP_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چھلانگ 
+اوپر </value>
+  </data>
+  <data name="KEY_CASE_LABEL" xml:space="preserve">
+    <value>کلیدی متن کی تبدیلی:</value>
+  </data>
+  <data name="KEY_FIXATION_TIME_TO_COMPLETE_LABEL" xml:space="preserve">
+    <value>مکمل  ہونے تک کلیدی اصلاح کا وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="KEY_FIXATION_TIME_TO_LOCK_ON_LABEL" xml:space="preserve">
+    <value>چالو ہونے تک کلیدی اصلاح کا وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="KEY_SELECTION_KEYBOARD_KEY_LABEL" xml:space="preserve">
+    <value>کلید کا انتخاب تختی سے:</value>
+  </data>
+  <data name="KEY_SELECTION_MOUSE_BUTTON_LABEL" xml:space="preserve">
+    <value>کلید کا انتخاب ماؤس کے بٹن سے:</value>
+  </data>
+  <data name="KEY_SELECTION_SOUND_LABEL" xml:space="preserve">
+    <value>کلیدی انتخاب:</value>
+  </data>
+  <data name="KEY_SELECTION_SOURCE_LABEL" xml:space="preserve">
+    <value>کلیدی انتخاب کا ماخذ:</value>
+  </data>
+  <data name="KEY_SELECTION_TRIGGER_DESCRIPTION" xml:space="preserve">
+    <value>کلیدی انتخاب: {0}</value>
+  </data>
+  <data name="KEYBOARD_KEY" xml:space="preserve">
+    <value>تختی کی کلید</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="KEYBOARD_AND_DICTIONARY_LANGUAGE_DESCRIPTION" xml:space="preserve">
+    <value>تختی کی زبان: {0}</value>
+  </data>
+  <data name="KEYBOARD_AND_DICTIONARY_LANGUAGE_LABEL" xml:space="preserve">
+    <value>تختی کی زبان:</value>
+  </data>
+  <data name="KEYBOARD_FOLDER_CAN_BE_CHANGED_SPLIT_LINE" xml:space="preserve">
+    <value>کلیدی تختی کا بستہ (folder) انتظامی مرکز/ مینجمنٹ کنسول (بصریات ٹیب) میں مرتب کیا جا سکتا ہے</value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>بائیں</value>
+  </data>
+  <data name="LEFT_ARROW_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>بائیں
+تیر ARROW </value>
+  </data>
+  <data name="LEFT_CLICK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>بائیں
+کلک کریں</value>
+  </data>
+  <data name="LEFT_DOUBLE_CLICK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>بائیں
+دو کلک کریں</value>
+  </data>
+  <data name="LEFT_DOWN_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>بائیں
+نیچے/اوپر</value>
+  </data>
+  <data name="LOOK" xml:space="preserve">
+    <value>دیکھو</value>
+  </data>
+  <data name="LOWER_CASE" xml:space="preserve">
+    <value>سبھی چھوٹے کیس میں</value>
+  </data>
+  <data name="MAGNETIC_CURSOR_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>مقناطیسی
+کرسر </value>
+  </data>
+  <data name="MAGNIFIER" xml:space="preserve">
+    <value>کلاں کار ( بڑا کرنے والا)</value>
+  </data>
+  <data name="MAGNIFY_DESTINATION_LABEL" xml:space="preserve">
+    <value>منزل مقصود کو بڑا کریں (اسکرین % کے طور پر):</value>
+  </data>
+  <data name="MAGNIFY_SOURCE_LABEL" xml:space="preserve">
+    <value>ماخذ کوبڑا کریں (اسکرین٪ کے طور پر):</value>
+  </data>
+  <data name="MANAGEMENT_CONSOLE_DESCRIPTION" xml:space="preserve">
+    <value>انتظامی مرکز(مینجمنٹ کنسول): ALT + M</value>
+  </data>
+  <data name="MANAGEMENT_CONSOLE_TITLE" xml:space="preserve">
+    <value>آپٹکی انتظامی مرکز(مینجمنٹ کنسول)</value>
+  </data>
+  <data name="MAX_DICTIONARY_MATCHES_LABEL" xml:space="preserve">
+    <value> لغات کے زیادہ سے زیادہ  ہم مطلب الفاظ:</value>
+  </data>
+  <data name="MENU" xml:space="preserve">
+    <value>فہرست</value>
+  </data>
+  <data name="MENU_LAYOUT" xml:space="preserve">
+    <value>فہرست</value>
+  </data>
+  <data name="MIDDLE_CLICK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>درمیان
+کلک کریں</value>
+  </data>
+  <data name="MIDDLE_DOWN_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>درمیان
+نیچے/اوپر</value>
+  </data>
+  <data name="MINIMISE" xml:space="preserve">
+    <value>لپیٹ دو MINIMISE</value>
+  </data>
+  <data name="MINIMISED_LAYOUT" xml:space="preserve">
+    <value>لپیٹ دیا Minimised</value>
+  </data>
+  <data name="MINIMISED_POSITION_LABEL" xml:space="preserve">
+    <value>لپٹی ہوئی حالت :</value>
+  </data>
+  <data name="MINIMUM_DWELL_TIME_TO_INCLUDE_IN_CAPTURE" xml:space="preserve">
+    <value>کلید پرنظر جما کر مقصد براری کا کم سے کم وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="MISC" xml:space="preserve">
+    <value>متفرق</value>
+  </data>
+  <data name="MOUSE" xml:space="preserve">
+    <value>ماؤس</value>
+  </data>
+  <data name="MOUSE_BUTTON" xml:space="preserve">
+    <value>ماؤس بٹن</value>
+  </data>
+  <data name="MOUSE_CLICK_SOUND_1" xml:space="preserve">
+    <value>ماؤس کلک 1</value>
+  </data>
+  <data name="MOUSE_CLICK_SOUND_2" xml:space="preserve">
+    <value>ماؤس کلک 2</value>
+  </data>
+  <data name="MOUSE_CLICK_SOUND_3" xml:space="preserve">
+    <value>ماؤس کلک 3</value>
+  </data>
+  <data name="MOUSE_CLICK_SOUND_4" xml:space="preserve">
+    <value>ماؤس کلک 4</value>
+  </data>
+  <data name="MOUSE_CLICK_SOUND_LABEL" xml:space="preserve">
+    <value>ماؤس  پر کلک کریں</value>
+  </data>
+  <data name="MOUSE_DOUBLE_CLICK_SOUND_1" xml:space="preserve">
+    <value>ماؤس ڈبل کلک 1</value>
+  </data>
+  <data name="MOUSE_DOUBLE_CLICK_SOUND_2" xml:space="preserve">
+    <value>ماؤس ڈبل کلک 2</value>
+  </data>
+  <data name="MOUSE_DOUBLE_CLICK_SOUND_3" xml:space="preserve">
+    <value>ماؤس ڈبل کلک 3</value>
+  </data>
+  <data name="MOUSE_DOUBLE_CLICK_SOUND_LABEL" xml:space="preserve">
+    <value>ماؤس ڈبل کلک </value>
+  </data>
+  <data name="MOUSE_DOWN_SOUND_1" xml:space="preserve">
+    <value>ماؤس نیچے 1</value>
+  </data>
+  <data name="MOUSE_DOWN_SOUND_2" xml:space="preserve">
+    <value>ماؤس نیچے 2</value>
+  </data>
+  <data name="MOUSE_DOWN_SOUND_3" xml:space="preserve">
+    <value>ماؤس نیچے 3</value>
+  </data>
+  <data name="MOUSE_DOWN_SOUND_4" xml:space="preserve">
+    <value>ماؤس نیچے 4</value>
+  </data>
+  <data name="MOUSE_DOWN_SOUND_LABEL" xml:space="preserve">
+    <value>ماؤس نیچے </value>
+  </data>
+  <data name="MOUSE_LAYOUT" xml:space="preserve">
+    <value>ماؤس </value>
+  </data>
+  <data name="MOUSE_POSITION" xml:space="preserve">
+    <value>ماؤس پوزیشن</value>
+  </data>
+  <data name="MOUSE_POSITION_SAMPLE_INTERVAL_LABEL" xml:space="preserve">
+    <value>ماؤس کی پوزیشن  میں وقفے کا نمونہ (ملی سیکنڈ) :</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_1" xml:space="preserve">
+    <value>ماؤس سکرال 1</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_2" xml:space="preserve">
+    <value>ماؤس سکرال 2</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_3" xml:space="preserve">
+    <value>ماؤس سکرال 3</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_4" xml:space="preserve">
+    <value>ماؤس سکرال 4</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_5" xml:space="preserve">
+    <value>ماؤس سکرال 5</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_6" xml:space="preserve">
+    <value>ماؤس سکرال 6</value>
+  </data>
+  <data name="MOUSE_SCROLL_SOUND_LABEL" xml:space="preserve">
+    <value>ماؤس سکرال </value>
+  </data>
+  <data name="MOUSE_UP_SOUND_1" xml:space="preserve">
+    <value>ماؤس اوپر1</value>
+  </data>
+  <data name="MOUSE_UP_SOUND_2" xml:space="preserve">
+    <value>ماؤس اوپر 2</value>
+  </data>
+  <data name="MOUSE_UP_SOUND_3" xml:space="preserve">
+    <value>ماؤس  اوپر 3</value>
+  </data>
+  <data name="MOUSE_UP_SOUND_4" xml:space="preserve">
+    <value>ماؤس  اوپر4</value>
+  </data>
+  <data name="MOUSE_UP_SOUND_LABEL" xml:space="preserve">
+    <value>ماؤس اوپر:</value>
+  </data>
+  <data name="MOVE" xml:space="preserve">
+    <value>اقدام/ حرکت</value>
+  </data>
+  <data name="MOVE_BY" xml:space="preserve">
+    <value>{0} پکسل حرکت کریں:|{0} پکسلزحرکت کریں:</value>
+  </data>
+  <data name="MOVE_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+نیچے اور بائیں </value>
+  </data>
+  <data name="MOVE_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+نیچے اور دائیں</value>
+  </data>
+  <data name="MOVE_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+نیچے</value>
+  </data>
+  <data name="MOVE_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+بائیں</value>
+  </data>
+  <data name="MOVE_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+دائیں </value>
+  </data>
+  <data name="MOVE_TO_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> حرکت
+دیں</value>
+  </data>
+  <data name="MOVE_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+اوپر اور بائیں </value>
+  </data>
+  <data name="MOVE_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+اوپر اور دائیں</value>
+  </data>
+  <data name="MOVE_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حرکت
+اوپر</value>
+  </data>
+  <data name="MULTI_KEY_CAPTURES" xml:space="preserve">
+    <value>کثیر التعداد کلیدی حصول</value>
+  </data>
+  <data name="MULTI_KEY_CAPTURES_ENABLED_LABEL" xml:space="preserve">
+    <value> کثیر التعداد کلیدی حصول فعال:</value>
+  </data>
+  <data name="MULTI_KEY_SELECTION" xml:space="preserve">
+    <value>کثیر التعداد کلیدی انتخاب </value>
+  </data>
+  <data name="MULTI_KEY_SELECTION_ENDING_SOUND_LABEL" xml:space="preserve">
+    <value> کثیر التعداد کلیدی انتخاب  کا اختتام:</value>
+  </data>
+  <data name="MULTI_KEY_SELECTION_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>کثیر التعداد کلیدی
+انتخاب</value>
+  </data>
+  <data name="MULTI_KEY_SELECTION_STARTING_SOUND_LABEL" xml:space="preserve">
+    <value> کثیر التعداد کلیدی انتخاب  کی ابتدا:</value>
+  </data>
+  <data name="NEW_DICTIONARY_ENTRY_WILL_CONTAIN_CAPITALS" xml:space="preserve">
+    <value>
+ ( لغات میں نیا اندراج جلی حردف میں ہو گا)</value>
+  </data>
+  <data name="NEXT" xml:space="preserve">
+    <value>اگلا</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>نہیں</value>
+  </data>
+  <data name="NO_KEYBOARDS_FOUND" xml:space="preserve">
+    <value>کوئی کلیدی تختی نہیں ملی</value>
+  </data>
+  <data name="NO_NEW_ENTRIES_IN_SCRATCHPAD" xml:space="preserve">
+    <value>ایسا نہیں لگتا کہ آپٹیکی کے بالائی حصے (scratchpad) میں  ایسے الفاظ یا جملے  ہیں جو لغات میں موجود نہیں.</value>
+  </data>
+  <data name="NO_SOUND" xml:space="preserve">
+    <value>کوئی بھی نہیں</value>
+  </data>
+  <data name="NOTHING_NEW" xml:space="preserve">
+    <value>ہوں، یہاں کچھ پھی نیا نہیں!</value>
+  </data>
+  <data name="NOTIFICATIONS" xml:space="preserve">
+    <value>اطلاعات</value>
+  </data>
+  <data name="NUM_LK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>NUM
+LK (ہندسوں کو تالا لگانے کی کلید)</value>
+  </data>
+  <data name="NUM_SYM_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>نمبر
+علامات  </value>
+  </data>
+  <data name="NUMBERS_AND_SYMBOLS" xml:space="preserve">
+    <value>ہندسے
+ اور علامات  (ہندسوں اور علامات کی تختی)</value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_LAYOUT_1" xml:space="preserve">
+    <value>ہندسے اور علامات 1</value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_LAYOUT_2" xml:space="preserve">
+    <value>ہندسے اور علامات 2</value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_LAYOUT_3" xml:space="preserve">
+    <value>ہندسے اور علامات 3</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ٹھیک ہے</value>
+  </data>
+  <data name="OPTIKEY_PRO_DESCRIPTION" xml:space="preserve">
+    <value>کمپیوٹر کنٹرول اور مواصلاتی</value>
+  </data>
+  <data name="OTHER" xml:space="preserve">
+    <value>دیگر</value>
+  </data>
+  <data name="PARENT_WINDOW_COULD_NOT_BE_FOUND" xml:space="preserve">
+    <value>آپٹیکی کے صدر دریچے (window) تک رسائی ممکن نہیں. جاری رکھنے میں ناکام</value>
+  </data>
+  <data name="PG_DN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>PG
+DN (صفحہ نیچے)</value>
+  </data>
+  <data name="PG_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>PG
+UP (صفحہ اوپر)</value>
+  </data>
+  <data name="PHYSICAL_KEYS_LAYOUT" xml:space="preserve">
+    <value>مادی/ٹھوس کلیدیں </value>
+  </data>
+  <data name="PHYSICAL_KEYS_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>مادی/ٹھوس
+ کلیدیں</value>
+  </data>
+  <data name="PLAY_SOUND" xml:space="preserve">
+    <value>چلائیے</value>
+  </data>
+  <data name="POINT_AND_SELECTING" xml:space="preserve">
+    <value>نقطے پہ نظر مرکوز کر کے منتخب کرنا</value>
+  </data>
+  <data name="POINT_FIXATION_RADIUS_LABEL" xml:space="preserve">
+    <value>نقطے کو بغور دیکھنے کا  رداس/ radius (پکسل):</value>
+  </data>
+  <data name="POINT_FIXATION_TIME_TO_COMPLETE_LABEL" xml:space="preserve">
+    <value>نقطے کو بغور دیکھ کرمکمل کرنے کا وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="POINT_FIXATION_TIME_TO_LOCK_ON_LABEL" xml:space="preserve">
+    <value>نقطے کو بغور دیکھتے ہوئے فعال ہونے تک کا وقت (ملی سیکنڈ):</value>
+  </data>
+  <data name="POINT_LOCK_ON_RADIUS_LABEL" xml:space="preserve">
+    <value>نقطے کو فعال کرنے کا رداس/ radius (پکسل):</value>
+  </data>
+  <data name="POINT_SELECTION_DESCRIPTION" xml:space="preserve">
+    <value>نقطے کا انتخاب: {0}</value>
+  </data>
+  <data name="POINT_SELECTION_KEYBOARD_KEY_LABEL" xml:space="preserve">
+    <value>نقطے کے انتخاب کی تختی کی کلید:</value>
+  </data>
+  <data name="POINT_SELECTION_MOUSE_BUTTON_LABEL" xml:space="preserve">
+    <value>نقطے کے انتخاب کا ماؤس بٹن:</value>
+  </data>
+  <data name="POINT_SELECTION_SOURCE_LABEL" xml:space="preserve">
+    <value>نقطے کے انتخاب کا ذریعہ:</value>
+  </data>
+  <data name="POINTING" xml:space="preserve">
+    <value>بغور دیکھنا</value>
+  </data>
+  <data name="POINTING_SOURCE_DESCRIPTION" xml:space="preserve">
+    <value>بغور دیکھنا: {0}</value>
+  </data>
+  <data name="PREV" xml:space="preserve">
+    <value>پچھلا</value>
+  </data>
+  <data name="PRNT_SCR_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>PRNT
+SCR  (سکرین پرنٹ کرنے کی کلید)</value>
+  </data>
+  <data name="PROBLEM_LOADING_KEYBOARD" xml:space="preserve">
+    <value>کلیدی تختی لادی (load) نہیں جا رہی</value>
+  </data>
+  <data name="QUIT" xml:space="preserve">
+    <value>بند کرو</value>
+  </data>
+  <data name="QUIT_CONFIRMATION_MESSAGE" xml:space="preserve">
+    <value>کیا آپ کو پورا یقین ہے کہ آپ  ختم کرنا چاہتے ہیں؟</value>
+  </data>
+  <data name="QUIT_MESSAGE" xml:space="preserve">
+    <value>کیا آپ کو یقین ہے کہ آپ  ختم کرنا چاہتے ہیں؟</value>
+  </data>
+  <data name="RATE_LABEL" xml:space="preserve">
+    <value>شرح:</value>
+  </data>
+  <data name="RE_CALIBRATE" xml:space="preserve">
+    <value>دوبارہ پیمانہ بندی کریں</value>
+  </data>
+  <data name="REPEAT_LAST_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>دوبارہ
+آخری</value>
+  </data>
+  <data name="REQUIRED_SERVICES_NOT_PASSED_TO_MANAGEMENT_WINDOW" xml:space="preserve">
+    <value>سماعی (آڈیو) اور/ یا لغات کی خدمات انتظامی دریچے Management window کی کارروائی کو فراہم نہیں کی گئی تھیں.</value>
+  </data>
+  <data name="RESTART_MESSAGE" xml:space="preserve">
+    <value> اپنی تبدیلیاں لاگو کرنے کے لئے آپ کو آپٹیکی دوبارہ شروع کرنے کی ضرورت ہے.
+ براہ کرم دوبارہ شروع کرنے کے لئے "ٹھیک ہے" پر کلک کریں، یا  اپنی تبدیلیاں ضائع کرنے کیلئے "منسوخ" کریں.</value>
+  </data>
+  <data name="RESTORE_DICTIONARY_ENTRY" xml:space="preserve">
+    <value>بحال کریں</value>
+  </data>
+  <data name="RESUMING_INCOMPLETE_KEY_FIXATION_REQUIRES_NEW_LOCK_ON_LABEL" xml:space="preserve">
+    <value>کلید پرنظر جمانے کا عمل اگر نامکمل رہ جائے تو اسے دوہرانا پڑے گا:</value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>صحیح</value>
+  </data>
+  <data name="RIGHT_ARROW_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>دایاں 
+تیر</value>
+  </data>
+  <data name="RIGHT_CLICK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>دایاں 
+کلک کریں</value>
+  </data>
+  <data name="RIGHT_UP_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>دایاں 
+نیچے/ اوپر</value>
+  </data>
+  <data name="RISING_SOUND_1" xml:space="preserve">
+    <value>اٹھتی ہوئی 1</value>
+  </data>
+  <data name="RISING_SOUND_2" xml:space="preserve">
+    <value>اٹھتی ہوئی 2</value>
+  </data>
+  <data name="RUSSIAN_RUSSIA" xml:space="preserve">
+    <value>روسی ( روس) / (Русский (Россия</value>
+  </data>
+  <data name="SPANISH_SPAIN" xml:space="preserve">
+    <value>ہسپانوی ( ہسپانیہ) / (Español (España</value>
+  </data>
+  <data name="SAME_AS_DOCK_POSITION" xml:space="preserve">
+    <value>وہی پوزیشن جو احاطے Dock کی ہے</value>
+  </data>
+  <data name="SCRATCHPAD_NUMBER_OF_LINES_LABEL" xml:space="preserve">
+    <value>آپٹیکی کے بالائی حصے (scratchpad) میں # لائنیں:</value>
+  </data>
+  <data name="SCRN_LK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>SCR
+LK (سکرول کو تالا لگانے کی کلید)</value>
+  </data>
+  <data name="SCROLL_BY" xml:space="preserve">
+    <value>{0}  سے سکرال کریں: | {0} کلک سے سکرال کریں:</value>
+  </data>
+  <data name="SCROLL_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> سکرول کریں
+نیچے</value>
+  </data>
+  <data name="SCROLL_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> سکرول کریں
+بائیں</value>
+  </data>
+  <data name="SCROLL_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> سکرول کریں
+دائیں</value>
+  </data>
+  <data name="SCROLL_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> سکرول کریں
+اوپر</value>
+  </data>
+  <data name="SELECTION" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="SELECTION_PROGRESS_INDICATOR_BEHAVIOUR_LABEL" xml:space="preserve">
+    <value>انتخاب کی عملی کارروائی کا مظہر:</value>
+  </data>
+  <data name="SELECTION_PROGRESS_INDICATOR_END_SIZE_LABEL" xml:space="preserve">
+    <value>انتخاب کی عملی کارروائی کے مظہر کا ناپ اختتام کے وقت (٪):</value>
+  </data>
+  <data name="SELECTION_PROGRESS_INDICATOR_START_SIZE_LABEL" xml:space="preserve">
+    <value>انتخاب کی عملی کارروائی کے مظہر کا ناپ آغاز کے وقت (٪):</value>
+  </data>
+  <data name="SHIFT" xml:space="preserve">
+    <value>شفٹ</value>
+  </data>
+  <data name="SHOW_SPLASH_SCREEN_ON_STARTUP_LABEL" xml:space="preserve">
+    <value>آغاز کے وقت  آپٹیکی کا ابتدائیہ سکرین (چند لمحات کے لئے) دکھائیں:</value>
+  </data>
+  <data name="SHRINK" xml:space="preserve">
+    <value>سکیڑیں</value>
+  </data>
+  <data name="SHRINK_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+نیچے اور رکھیں</value>
+  </data>
+  <data name="SHRINK_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+نیچے اور دائیں </value>
+  </data>
+  <data name="SHRINK_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+نیچے</value>
+  </data>
+  <data name="SHRINK_INDICATOR" xml:space="preserve">
+    <value>سکیڑیں</value>
+  </data>
+  <data name="SHRINK_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+بائیں</value>
+  </data>
+  <data name="SHRINK_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+ دائیں</value>
+  </data>
+  <data name="SHRINK_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+اوپر  اوربائیں</value>
+  </data>
+  <data name="SHRINK_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+اوپر  اور دائیں</value>
+  </data>
+  <data name="SHRINK_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سکیڑیں
+اوپر</value>
+  </data>
+  <data name="SIMILAR_DICTIONARY_ENTRIES_EXIST" xml:space="preserve">
+    <value>( آپ کی اطلاع کے لئے: کچھ اسی طرح کے اندراج پہلے ہی لغات میں ہیں: {0})</value>
+  </data>
+  <data name="SIZE_AND_POSITION_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>حجم &amp; 
+مقام</value>
+  </data>
+  <data name="SIZE_POSITION_LAYOUT" xml:space="preserve">
+    <value>حجم اور مقام</value>
+  </data>
+  <data name="SLEEP" xml:space="preserve">
+    <value>نیند</value>
+  </data>
+  <data name="SOUND_EFFECTS" xml:space="preserve">
+    <value>آواز  کے  اثرات</value>
+  </data>
+  <data name="SOUNDS" xml:space="preserve">
+    <value>آوازیں</value>
+  </data>
+  <data name="SOURCE_LABEL" xml:space="preserve">
+    <value>ماخذ /  ذریعہ:</value>
+  </data>
+  <data name="SPACE" xml:space="preserve">
+    <value>جگہ</value>
+  </data>
+  <data name="SPEAK" xml:space="preserve">
+    <value>بات کریں</value>
+  </data>
+  <data name="SPEECH" xml:space="preserve">
+    <value>گفتگو</value>
+  </data>
+  <data name="STARTUP_KEYBOARD_LABEL" xml:space="preserve">
+    <value>آغاز کے وقت کلیدی تختی:</value>
+  </data>
+  <data name="STARTUP_KEYBOARD_FILE_LOCATION_LABEL" xml:space="preserve">
+    <value>متحرک کلیدی تختی کی فائل:</value>
+  </data>
+  <data name="STOP_SIGNAL_LABEL" xml:space="preserve">
+    <value>رکنے کا اشارہ:</value>
+  </data>
+  <data name="SUCCESS" xml:space="preserve">
+    <value>کامیابی</value>
+  </data>
+  <data name="SUPPRESS_MODIFIERS_IN_MOUSE_KEYBOARD_LABEL" xml:space="preserve">
+    <value>جب ماؤس کی تختی میں ہوں تو ترمیمی کلیدیں نا قابل استعمال بنا دیں:</value>
+  </data>
+  <data name="TAB" xml:space="preserve">
+    <value>ٹیب TAB</value>
+  </data>
+  <data name="THE_EYE_TRIBE" xml:space="preserve">
+    <value>نظر کا جائزہ لینے والا آلہ The Eye Tribe</value>
+  </data>
+  <data name="THE_EYE_TRIBE_ACTIVATION_ERROR" xml:space="preserve">
+    <value>نظر منتظم TheEyeTribe کو چالو کرنے میں  نا کامی! براہ کرم  دیکھیں کہ سرور (server) چل رہا ہے اور آلہ منسلک ہے-  پھر دوبارہ کوشش کریں.</value>
+  </data>
+  <data name="THE_EYE_TRIBE_NOT_CALIBRATED" xml:space="preserve">
+    <value>نظر منتظم TheEyeTribe کی پیمانہ بندی نہیں کی گئی ہے۔ پیمانہ بندی مکمل ہونے تک کوئی ڈیٹا موصول نہیں کیا جا سکے گا</value>
+  </data>
+  <data name="THE_EYE_TRIBE_UNABLE_TO_CALIBRATE_NO_ENGINE" xml:space="preserve">
+    <value>پیمانہ بندی کرنا ممکن نہیں کیونکہ پروگرامی سہارا EyeTribe software  دستیاب نہیں ہے</value>
+  </data>
+  <data name="THEME_LABEL" xml:space="preserve">
+    <value>تمثیل/خیال بندی (Theme) :</value>
+  </data>
+  <data name="TIME_UNTIL_POINT_BECOMES_IRRELEVENT_LABEL" xml:space="preserve">
+    <value> مہلت کا وقفہ جس کے بعد نقطہ بے محل ہو جاتا ہے (ملی سیکنڈ):</value>
+  </data>
+  <data name="HIDE_CURSOR_LABEL" xml:space="preserve">
+    <value>کرسر چھپائیں</value>
+  </data>
+  <data name="TITLE_CASE" xml:space="preserve">
+    <value>الفاظ بڑے حروف میں ہیں</value>
+  </data>
+  <data name="TOBII_EYEX" xml:space="preserve">
+    <value>بینائی کا انجن Tobii EyeX</value>
+  </data>
+  <data name="TOBII_EYEX_CALIBRATION_SUCCESS" xml:space="preserve">
+    <value>پیمانہ بندی کا عمَل  مکمل، یا ممکنہ طور پر منسوخ کر دیا، لیکن سب کچھ دوبارہ کام کر رہا ہے!</value>
+  </data>
+  <data name="TOBII_PCEYE_GO" xml:space="preserve">
+    <value>ٹوبی Tobii کمپیوٹری آنکھ چلو</value>
+  </data>
+  <data name="TOBII_REX" xml:space="preserve">
+    <value>نظر کا جائزہ لینے والا آلہ Tobii REX</value>
+  </data>
+  <data name="TONE_SOUND_1" xml:space="preserve">
+    <value>آواز 1</value>
+  </data>
+  <data name="TONE_SOUND_2" xml:space="preserve">
+    <value>آواز 2</value>
+  </data>
+  <data name="TONE_SOUND_3" xml:space="preserve">
+    <value>آواز 3</value>
+  </data>
+  <data name="TONE_SOUND_4" xml:space="preserve">
+    <value>آواز4</value>
+  </data>
+  <data name="TRIGGER_PRESSED_AGAIN" xml:space="preserve">
+    <value>چلانے کا بٹن/کلید دوبارہ دبا دیا گیا</value>
+  </data>
+  <data name="TRIGGER_RELEASED" xml:space="preserve">
+    <value>چلانے کا بٹن/کلید چھوڑدیا گیا</value>
+  </data>
+  <data name="TRIGGER_WITHOUT_POSITION_ERROR" xml:space="preserve">
+    <value>مجھے پتہ نہیں  لگ رہا کہ آپ اپنی توجہ کہاں  مبذول کر رہے ہیں. کیا معلومات داخل کرنےوالا آلہ  ٹھیک کام کر رہا ہے؟ کیا یہ منسلک ہے، چالو ہے، پیمانہ بندی کر دی گئی ہے، وغیرہ؟</value>
+  </data>
+  <data name="UNABLE_TO_DETERMINE_CURRENT_ELEVATION" xml:space="preserve">
+    <value>آپٹیکی کی موجودہ سطح کا تعین نہیں کیا جا سکا.</value>
+  </data>
+  <data name="UNABLE_TO_SET_VOICE_WARNING" xml:space="preserve">
+    <value>'{0}' {1} پر آواز قائم کرنے میں ایک مسئلہ تھا.</value>
+  </data>
+  <data name="UNKNOWN_CALIBRATION_ERROR" xml:space="preserve">
+    <value>کچھ غلط ہو گیا، لیکن مجھے پتہ نہیں  کیا - براہ کرم لاگ (روز نامچہ) کی جانچ پڑتال کریں</value>
+  </data>
+  <data name="UP" xml:space="preserve">
+    <value>سب سے اوپر</value>
+  </data>
+  <data name="UP_ARROW_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>اوپر
+تیر</value>
+  </data>
+  <data name="UPDATE_AVAILABLE" xml:space="preserve">
+    <value> اپ ڈیٹ/ تازہ ترین شکل دستیاب ہے!</value>
+  </data>
+  <data name="UPPER_CASE" xml:space="preserve">
+    <value>سب بڑے/جلی حروف میں</value>
+  </data>
+  <data name="URL_DOWNLOAD_PROMPT" xml:space="preserve">
+    <value>تازہ کاری نسخہ / ورژن  ({0}) کو اتارنے/ڈاؤن لوڈ کرنے کیلئے www.optikey.org ملاحظہ کریں.
+ آپ  انتظامی مرکز / مینجمنٹ کنسول (ALT + M ) سے اپ ڈیٹ/ تازہ ترین شکل کی جانچ بند کر سکتے ہیں.</value>
+  </data>
+  <data name="VERIFY_RESTART" xml:space="preserve">
+    <value>کیا میں آپٹیکی کو دوبارہ شروع کر دوں؟</value>
+  </data>
+  <data name="VERSION_DESCRIPTION" xml:space="preserve">
+    <value>نسخہ / ورژن  {0} </value>
+  </data>
+  <data name="VERTICAL_FILL_LABEL" xml:space="preserve">
+    <value>عمودی بھرائی (جیسا کہ٪ اسکرین):</value>
+  </data>
+  <data name="VISUALS" xml:space="preserve">
+    <value>بصریات</value>
+  </data>
+  <data name="VOICE_COMES_FROM_SETTINGS" xml:space="preserve">
+    <value>(ترکیبات سے)</value>
+  </data>
+  <data name="VOICE_LABEL" xml:space="preserve">
+    <value>آواز</value>
+  </data>
+  <data name="VOLUME_LABEL" xml:space="preserve">
+    <value>حجم</value>
+  </data>
+  <data name="WEBSITE_DESCRIPTION" xml:space="preserve">
+    <value>ویب سائٹ / سائبر خانہ: www.optikey.org</value>
+  </data>
+  <data name="WIN" xml:space="preserve">
+    <value>کلید/ بٹن WIN</value>
+  </data>
+  <data name="WINDOW_TITLE" xml:space="preserve">
+    <value>آپٹیکی {0}</value>
+  </data>
+  <data name="WORDS" xml:space="preserve">
+    <value>الفاظ</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>ہاں </value>
+  </data>
+  <data name="YESNO" xml:space="preserve">
+    <value>ہاں /نہیں</value>
+  </data>
+  <data name="ALPHA_LAYOUT" xml:space="preserve">
+    <value>حروف</value>
+  </data>
+  <data name="HIGH" xml:space="preserve">
+    <value>اونچا</value>
+  </data>
+  <data name="LOW" xml:space="preserve">
+    <value>نیچا</value>
+  </data>
+  <data name="MEDIUM" xml:space="preserve">
+    <value>درمیانہ</value>
+  </data>
+  <data name="NONE" xml:space="preserve">
+    <value>کوئی بھی نہیں</value>
+  </data>
+  <data name="TOBII_EYEX_DATA_STREAM_PROCESSING_LEVEL" xml:space="preserve">
+    <value>رواں ڈیٹا سے نبٹنے کے لئے متعین مقدار:</value>
+  </data>
+  <data name="GERMAN_GERMANY" xml:space="preserve">
+    <value>جرمن (جرمنی) /Deutsch (Deutschland)</value>
+  </data>
+  <data name="UI_LANGUAGE_DESCRIPTION" xml:space="preserve">
+    <value>صارف کے ساتھ رابطے کی زبان user interface language: {0}</value>
+  </data>
+  <data name="UI_LANGUAGE_LABEL" xml:space="preserve">
+    <value>صارف کے ساتھ رابطے کی زبان:</value>
+  </data>
+  <data name="PUBLISH_VIRTUAL_KEY_CODES_FOR_CHARACTERS_LABEL" xml:space="preserve">
+    <value>حروف ٹائپ کرتے کو مادی/ ٹھوس کلیدیں دبانا فرض کر لو:</value>
+  </data>
+  <data name="DUTCH_BELGIUM" xml:space="preserve">
+    <value> ولندیزی (بیلجیم) / Nederlands (België)</value>
+  </data>
+  <data name="DUTCH_NETHERLANDS" xml:space="preserve">
+    <value>ولندیزی ( ولندیز) /Nederlands (Nederland)</value>
+  </data>
+  <data name="FRENCH_FRANCE_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>فرانسیسی
+ (فرانس) /
+Française(France)</value>
+  </data>
+  <data name="GERMAN_GERMANY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>جرمن (جرمنی) /Deutsch
+(Deutschland)</value>
+  </data>
+  <data name="MAGNIFY_SUPPRESSED_FOR_SCROLLING_ACTIONS_LABEL" xml:space="preserve">
+    <value>سکرول کاری کے عمل کے لئے ماؤس کی کلاں نمائی کو غیر فعال بنا دو:</value>
+  </data>
+  <data name="RUSSIAN_RUSSIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>روسی
+ (روس) / 
+Русский (Россия)</value>
+  </data>
+  <data name="SPANISH_SPAIN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>ہسپانوی
+ (ہسپانیہ) /
+ Español(España)</value>
+  </data>
+  <data name="DYNAMIC_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value> متحرک کلیدی تختی کی فہرست </value>
+  </data>
+  <data name="CONVERSATION_BORDER_THICKNESS_LABEL" xml:space="preserve">
+    <value>بات چیت کی کلیدی تختی کے کنارے کی چوڑائی (بائیں، انتہائی اوپر، دائیں،  انتہائی  نیچے, ملی سیکنڈ میں):</value>
+  </data>
+  <data name="BACK_ONE" xml:space="preserve">
+    <value>پیچھے ایک</value>
+  </data>
+  <data name="BACK_WORD" xml:space="preserve">
+    <value>پیچھے لفظ </value>
+  </data>
+  <data name="SUGGESTION_1" xml:space="preserve">
+    <value>تجویز 1</value>
+  </data>
+  <data name="SUGGESTION_2" xml:space="preserve">
+    <value>تجویز 2</value>
+  </data>
+  <data name="SUGGESTION_3" xml:space="preserve">
+    <value>تجویز 3</value>
+  </data>
+  <data name="SUGGESTION_4" xml:space="preserve">
+    <value>تجویز 4</value>
+  </data>
+  <data name="SUGGESTION_5" xml:space="preserve">
+    <value>تجویز 5</value>
+  </data>
+  <data name="SUGGESTION_6" xml:space="preserve">
+    <value>تجویز 6</value>
+  </data>
+  <data name="SUGGESTION_KEYS_GROUP_LABEL" xml:space="preserve">
+    <value>تجاویز کی  کلیدیں</value>
+  </data>
+  <data name="ADD_TO_DICTIONARY" xml:space="preserve">
+    <value>لغات میں داخل کرو</value>
+  </data>
+  <data name="COLLAPSE_DOCK" xml:space="preserve">
+    <value>احاطہ / Dock منہدم کرو</value>
+  </data>
+  <data name="DOWN_ARROW" xml:space="preserve">
+    <value>نیچے کی طرف تیر </value>
+  </data>
+  <data name="F1" xml:space="preserve">
+    <value>فنکشن کلید F1</value>
+  </data>
+  <data name="F10" xml:space="preserve">
+    <value>فنکشن کلید F10</value>
+  </data>
+  <data name="F11" xml:space="preserve">
+    <value>فنکشن کلید F11</value>
+  </data>
+  <data name="F12" xml:space="preserve">
+    <value>فنکشن کلید F12</value>
+  </data>
+  <data name="F13" xml:space="preserve">
+    <value>فنکشن کلید F13</value>
+  </data>
+  <data name="F14" xml:space="preserve">
+    <value>فنکشن کلید F14</value>
+  </data>
+  <data name="F15" xml:space="preserve">
+    <value>فنکشن کلید F15</value>
+  </data>
+  <data name="F16" xml:space="preserve">
+    <value>فنکشن کلید F16</value>
+  </data>
+  <data name="F17" xml:space="preserve">
+    <value>فنکشن کلید F17</value>
+  </data>
+  <data name="F18" xml:space="preserve">
+    <value>فنکشن کلید F18</value>
+  </data>
+  <data name="F19" xml:space="preserve">
+    <value>فنکشن کلید F19</value>
+  </data>
+  <data name="F2" xml:space="preserve">
+    <value>فنکشن کلید F2</value>
+  </data>
+  <data name="F3" xml:space="preserve">
+    <value>فنکشن کلید  F3</value>
+  </data>
+  <data name="F4" xml:space="preserve">
+    <value>فنکشن کلید F4</value>
+  </data>
+  <data name="F5" xml:space="preserve">
+    <value>فنکشن کلید F5</value>
+  </data>
+  <data name="F6" xml:space="preserve">
+    <value>فنکشن کلید F6</value>
+  </data>
+  <data name="F7" xml:space="preserve">
+    <value>فنکشن کلید F7</value>
+  </data>
+  <data name="F8" xml:space="preserve">
+    <value>فنکشن کلید F8</value>
+  </data>
+  <data name="F9" xml:space="preserve">
+    <value>فنکشن کلید F9</value>
+  </data>
+  <data name="LEFT_ARROW" xml:space="preserve">
+    <value>بائیں طرف تیر</value>
+  </data>
+  <data name="RIGHT_ARROW" xml:space="preserve">
+    <value>دائیں طرف تیر</value>
+  </data>
+  <data name="UP_ARROW" xml:space="preserve">
+    <value>اوپر کی طرف تیر</value>
+  </data>
+  <data name="CLICK_AND_DRAG" xml:space="preserve">
+    <value>کلک کریں اور گھسیٹیں</value>
+  </data>
+  <data name="CURRENCIES_1" xml:space="preserve">
+    <value>سکہ رائج الوقت / کرنسی  1</value>
+  </data>
+  <data name="CURRENCIES_2" xml:space="preserve">
+    <value>سکہ رائج الوقت / کرنسی  2</value>
+  </data>
+  <data name="DECREASE_OPACITY" xml:space="preserve">
+    <value>دھندلا پن  کم کرو</value>
+  </data>
+  <data name="DIACRITICS_1" xml:space="preserve">
+    <value>اعراب 1</value>
+  </data>
+  <data name="DIACRITICS_2" xml:space="preserve">
+    <value>اعراب 2</value>
+  </data>
+  <data name="DIACRITICS_3" xml:space="preserve">
+    <value>اعراب 3</value>
+  </data>
+  <data name="EXPAND_DOCK" xml:space="preserve">
+    <value>احاطہ /Dock کو پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_DOWN" xml:space="preserve">
+    <value> نیچے کی طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_DOWN_AND_LEFT" xml:space="preserve">
+    <value>نیچے &amp; بائیں طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_DOWN_AND_RIGHT" xml:space="preserve">
+    <value>نیچے &amp; دایئں طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_LEFT" xml:space="preserve">
+    <value>بائیں طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_RIGHT" xml:space="preserve">
+    <value> دائیں طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_UP" xml:space="preserve">
+    <value> اوپر کی طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_UP_AND_LEFT" xml:space="preserve">
+    <value> اوپر کی طرف اور بائیں طرف پھیلاؤ</value>
+  </data>
+  <data name="EXPAND_UP_AND_RIGHT" xml:space="preserve">
+    <value>اوپر کی طرف اور دائیں طرف پھیلاؤ</value>
+  </data>
+  <data name="INCREASE_OPACITY" xml:space="preserve">
+    <value>دھندلا پن زیادہ کریں</value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_1" xml:space="preserve">
+    <value>ہندسے اور علامات 1 </value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_2" xml:space="preserve">
+    <value>ہندسے اور علامات 2</value>
+  </data>
+  <data name="NUMBERS_SYMBOLS_3" xml:space="preserve">
+    <value>ہندسے اور علامات 3</value>
+  </data>
+  <data name="PHYSICAL_KEYS" xml:space="preserve">
+    <value>مادی/ ٹھوس کلیدیں</value>
+  </data>
+  <data name="SIZE_AND_POSITION" xml:space="preserve">
+    <value>سائز اور پوزیشن</value>
+  </data>
+  <data name="MAGNETIC_CURSOR" xml:space="preserve">
+    <value>مقناطیسی کرسر</value>
+  </data>
+  <data name="MIDDLE_CLICK" xml:space="preserve">
+    <value>درمیانہ کلک کریں</value>
+  </data>
+  <data name="MIDDLE_DOWN_UP" xml:space="preserve">
+    <value>درمیان  نیچے/اوپر</value>
+  </data>
+  <data name="MOVE_AMOUNT_IN_PIXEL" xml:space="preserve">
+    <value>پکسلزمیں مقدار منتقل کریں</value>
+  </data>
+  <data name="ADJUST_AMOUNT_IN_PIXELS" xml:space="preserve">
+    <value>مقدار کو پکسلز میں تسلی بخش شکل دیں</value>
+  </data>
+  <data name="CONVERSATION_ALPHA_1" xml:space="preserve">
+    <value>گفتگو الف 1</value>
+  </data>
+  <data name="CONVERSATION_NUMERIC_AND_SYMBOLS" xml:space="preserve">
+    <value>گفتگو  ہندسے اورعلامات </value>
+  </data>
+  <data name="JUMP_DOWN" xml:space="preserve">
+    <value>نیچے چھلانگ</value>
+  </data>
+  <data name="JUMP_DOWN_AND_LEFT" xml:space="preserve">
+    <value>نیچے &amp; بائیں  طرف چھلانگ</value>
+  </data>
+  <data name="JUMP_DOWN_AND_RIGHT" xml:space="preserve">
+    <value>نیچے &amp; دائیں  طرف چھلانگ</value>
+  </data>
+  <data name="JUMP_LEFT" xml:space="preserve">
+    <value>بائیں طرف  چھلانگ</value>
+  </data>
+  <data name="JUMP_RIGHT" xml:space="preserve">
+    <value>دائیں طرف جائیں</value>
+  </data>
+  <data name="JUMP_UP" xml:space="preserve">
+    <value>اوپر چھلانگ</value>
+  </data>
+  <data name="JUMP_UP_AND_LEFT" xml:space="preserve">
+    <value>اوپر &amp; بائیں  طرف چھلانگ</value>
+  </data>
+  <data name="JUMP_UP_AND_RIGHT" xml:space="preserve">
+    <value>اوپر &amp; دائیں  طرف چھلانگ</value>
+  </data>
+  <data name="LEFT_CLICK" xml:space="preserve">
+    <value>بایاں کلک</value>
+  </data>
+  <data name="LEFT_DOUBLE_CLICK" xml:space="preserve">
+    <value>بایاں  دوہرا کلک کریں</value>
+  </data>
+  <data name="LEFT_DOWN_UP" xml:space="preserve">
+    <value> بائیں  نیچے/ اوپر</value>
+  </data>
+  <data name="MOVE_DOWN" xml:space="preserve">
+    <value>نیچے منتقل</value>
+  </data>
+  <data name="MOVE_DOWN_AND_LEFT" xml:space="preserve">
+    <value>نیچے منتقل کریں اور بائیں طرف</value>
+  </data>
+  <data name="MOVE_DOWN_AND_RIGHT" xml:space="preserve">
+    <value>نیچے  منتقل کریں اور دائیں طرف</value>
+  </data>
+  <data name="MOVE_LEFT" xml:space="preserve">
+    <value>بائیں طرف منتقل کریں</value>
+  </data>
+  <data name="MOVE_RIGHT" xml:space="preserve">
+    <value>دائیں طرف بڑھو</value>
+  </data>
+  <data name="MOVE_TO" xml:space="preserve">
+    <value>اس طرف بڑھو</value>
+  </data>
+  <data name="MOVE_UP" xml:space="preserve">
+    <value>اوپر جاؤ</value>
+  </data>
+  <data name="MOVE_UP_AND_LEFT" xml:space="preserve">
+    <value>اوپر جائیں اور بائیں طرف</value>
+  </data>
+  <data name="MOVE_UP_AND_RIGHT" xml:space="preserve">
+    <value>اوپر جائیں اور دائیں طرف</value>
+  </data>
+  <data name="MULTI_KEY_SELECTION_UPPER_CASE" xml:space="preserve">
+    <value>کثیر التعداد کلیدی انتخاب </value>
+  </data>
+  <data name="NUM_LK" xml:space="preserve">
+    <value>نمبروں کو تالا لگانے کی کلید NUM LK</value>
+  </data>
+  <data name="PG_DN" xml:space="preserve">
+    <value>ایک صفحہ  نیچے PG DN</value>
+  </data>
+  <data name="PG_UP" xml:space="preserve">
+    <value>ایک صفحہ اوپر PG UP</value>
+  </data>
+  <data name="PRNT_SCR" xml:space="preserve">
+    <value>سکرین پرنٹ کرنے کی کلید PRNT SCR</value>
+  </data>
+  <data name="REPEAT_LAST" xml:space="preserve">
+    <value>پچھلا عمل دوہرائیں</value>
+  </data>
+  <data name="RIGHT_CLICK" xml:space="preserve">
+    <value>دائیں جانب کلک کریں</value>
+  </data>
+  <data name="RIGHT_DOWN_UP" xml:space="preserve">
+    <value>دائیں طرف  نیچے/ اوپر</value>
+  </data>
+  <data name="SCRN_LK" xml:space="preserve">
+    <value>سکرول کو تالا لگانے کی کلید  SCR LK</value>
+  </data>
+  <data name="SCROLL_AMOUNT_IN_CLICKS" xml:space="preserve">
+    <value>سکرول کی مقدار میں کلکوں clicks کی تعداد</value>
+  </data>
+  <data name="SCROLL_DOWN" xml:space="preserve">
+    <value>نیچے سکرول کریں</value>
+  </data>
+  <data name="SCROLL_LEFT" xml:space="preserve">
+    <value>بائیں طرف سکرال </value>
+  </data>
+  <data name="SCROLL_RIGHT" xml:space="preserve">
+    <value>دائیں  طرف  سکرال</value>
+  </data>
+  <data name="SCROLL_UP" xml:space="preserve">
+    <value>اوپر سکرال کرو</value>
+  </data>
+  <data name="SHRINK_DOWN" xml:space="preserve">
+    <value>نیچے  سکیڑ یں </value>
+  </data>
+  <data name="SHRINK_DOWN_AND_LEFT" xml:space="preserve">
+    <value>نیچے سکیڑ یں  اور بائیں طرف</value>
+  </data>
+  <data name="SHRINK_DOWN_AND_RIGHT" xml:space="preserve">
+    <value>نیچے سکیڑ یں اور دائیں طرف</value>
+  </data>
+  <data name="SHRINK_LEFT" xml:space="preserve">
+    <value>سکیڑ یں  بائیں طرف</value>
+  </data>
+  <data name="SHRINK_RIGHT" xml:space="preserve">
+    <value>سکیڑ یں  دائیں طرف</value>
+  </data>
+  <data name="SHRINK_UP" xml:space="preserve">
+    <value>سکیڑ یں اوپر</value>
+  </data>
+  <data name="SHRINK_UP_AND_LEFT" xml:space="preserve">
+    <value>سکیڑ یں  اوپر اور بائیں طرف</value>
+  </data>
+  <data name="SHRINK_UP_AND_RIGHT" xml:space="preserve">
+    <value>سکیڑ یں اوپر اور دائیں طرف</value>
+  </data>
+  <data name="CHANGE_KEYBOARD_KEY_GROUP" xml:space="preserve">
+    <value>تختی کی کلیدیں تبدیل کریں:</value>
+  </data>
+  <data name="DOCK_ACTIONS_KEY_GROUP" xml:space="preserve">
+    <value>احاطہ Dock کی  فعال کلیدیں:</value>
+  </data>
+  <data name="INDIVIDUAL_KEY_FIXATION_TIME_TO_COMPLETE_LABEL" xml:space="preserve">
+    <value>انفرادی کلیدوں پر نظر جمانے کے اوقات پر حاوی وقت (ملی سیکنڈ): </value>
+  </data>
+  <data name="LANGUAGES_KEY_GROUP" xml:space="preserve">
+    <value>زبان کی کلیدیں تبدیل کریں:</value>
+  </data>
+  <data name="LANGUAGE_UPPER_CASE" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="MISC_ACTIONS_KEY_GROUP" xml:space="preserve">
+    <value>متفرق کلیدیں</value>
+  </data>
+  <data name="MODIFIER_KEYS_KEY_GROUP" xml:space="preserve">
+    <value>ترمیم کرنے والی کلیدیں: </value>
+  </data>
+  <data name="MOUSE_DO_AT_CURRENT_LOCATION_KEY_GROUP" xml:space="preserve">
+    <value>ماؤس (موجودہ جگہ پر عمل کریں)  کلیدیں:</value>
+  </data>
+  <data name="MOUSE_DO_AT_POINT_KEY_GROUP" xml:space="preserve">
+    <value>ماؤس ( نقطہ پر عمل کریں)  کلیدیں: </value>
+  </data>
+  <data name="MOUSE_MISC_KEY_GROUP" xml:space="preserve">
+    <value>ماؤس (متفرق) کلیدیں :</value>
+  </data>
+  <data name="MOVE_AND_RESIZE_KEY_GROUP" xml:space="preserve">
+    <value>حرکت دینے اور ناپ بدلنے کی کلیدیں:</value>
+  </data>
+  <data name="PHYSICAL_KEYS_KEY_GROUP" xml:space="preserve">
+    <value>مادی/ٹھوس کلیدیں:</value>
+  </data>
+  <data name="SUGGESTION_KEYS_KEY_GROUP" xml:space="preserve">
+    <value>مشاورتی کلیدیں:</value>
+  </data>
+  <data name="KEY_FIXATION_TIME_TO_COMPLETE_ON_INDIVIDUAL_KEYS" xml:space="preserve">
+    <value>انفرادی کلیدوں کے لئے تکمیل تک پہنچنے کے اوقات مقرر کریں:</value>
+  </data>
+  <data name="GREEK_GREECE" xml:space="preserve">
+    <value>یونانی (یونان) / Ελληνικά (Ελλάδα)</value>
+  </data>
+  <data name="MANAGEMENT_CONSOLE" xml:space="preserve">
+    <value>انتظامی مرکز/مینجمنٹ کنسول (ترتیبات)</value>
+  </data>
+  <data name="QUIT_TITLE_CASE" xml:space="preserve">
+    <value>بند کرو </value>
+  </data>
+  <data name="GEORGIAN_GEORGIA" xml:space="preserve">
+    <value> جارجیائی (جارجیا) / ქართული (საქართველო)</value>
+  </data>
+  <data name="GEORGIAN_GEORGIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> جارجیائی
+(جارجیا) /
+ქართული
+(საქართველო)</value>
+  </data>
+  <data name="GREEK_GREECE_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>یونانی (یونان) / Ελληνικά (Ελλάδα)</value>
+  </data>
+  <data name="CROATIAN_CROATIA" xml:space="preserve">
+    <value>کروشیائی ( کروشیا) / Hrvatski (Hrvatska)</value>
+  </data>
+  <data name="CROATIAN_CROATIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>کروشیائی
+ (کروشیا) / 
+Hrvatski(Hrvatska)</value>
+  </data>
+  <data name="DUTCH_BELGIUM_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>ولندیزی
+ (بیلجیم) / 
+Nederlands(België)</value>
+  </data>
+  <data name="DUTCH_NETHERLANDS_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>ولندیزی
+( ولندیز) /
+Nederlands(Nederland)</value>
+  </data>
+  <data name="SUPPRESS_MODIFIERS_FOR_ALL_MOUSE_ACTIONS" xml:space="preserve">
+    <value>ماؤس کی کارروائی پہ اثر انداز ہونے والی ترمیمی کلیدوں کو بے اثر کر دو:</value>
+  </data>
+  <data name="ENGLISH_CANADA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> 
+انگریزی
+(کینیڈا)
+ </value>
+  </data>
+  <data name="ENGLISH_UK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>
+ انگریزی
+ (برطانیہ)
+ </value>
+  </data>
+  <data name="ENGLISH_US_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>
+ انگریزی
+ (امریکہ)
+ </value>
+  </data>
+  <data name="CATALAN_SPAIN" xml:space="preserve">
+    <value>قیطلونی ( ہسپانیہ) / Català (Espanya)</value>
+  </data>
+  <data name="CATALAN_SPAIN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>قیطلونی
+ ( ہسپانیہ ) /
+Català
+(Espanya)</value>
+  </data>
+  <data name="TURKISH_TURKEY" xml:space="preserve">
+    <value>ترکی (ترکی) / Türkçe (Türkiye)</value>
+  </data>
+  <data name="TURKISH_TURKEY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>ترکی
+ (ترکی) /
+Türkçe
+(Türkiye)</value>
+  </data>
+  <data name="ITALIAN_ITALY" xml:space="preserve">
+    <value>اطالوی (اطالیہ) /  Italiano (Italia)</value>
+  </data>
+  <data name="ITALIAN_ITALY_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>اطالوی
+(اطالیہ) /
+Italiano
+(Italia)</value>
+  </data>
+  <data name="KOREAN_KOREA" xml:space="preserve">
+    <value>کوریا ئی (کوریا) / 한국어 (한국)</value>
+  </data>
+  <data name="KOREAN_KOREA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>کوریائی
+ (کوریا) /
+한국어
+(한국)</value>
+  </data>
+  <data name="SERBIAN_SERBIA" xml:space="preserve">
+    <value> سرویائی (سرویہ ) /  Српски (Србија)</value>
+  </data>
+  <data name="SERBIAN_SERBIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> سرویائی
+ (سرویہ ) /
+Српски
+(Србија)</value>
+  </data>
+  <data name="SLOVENIAN_SLOVENIA" xml:space="preserve">
+    <value>سلافی ( سلاف) / Slovensko (Slovenija)</value>
+  </data>
+  <data name="SLOVENIAN_SLOVENIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سلافی
+( سلاف) /
+Slovensko
+(Slovenija)</value>
+  </data>
+  <data name="MY_GAZE_CONNECT_ERROR" xml:space="preserve">
+    <value> نظر منتظم myGaze سے رابطہ قائم کرنے  سے قاصر! براہ کرم  دیکھیں کہ سرور (server) چل رہا ہے اور آلہ منسلک ہے,  پھر دوبارہ کوشش کریں.</value>
+  </data>
+  <data name="VI_MYGAZE" xml:space="preserve">
+    <value>بصری تعامل MyGaze میری نگاہ</value>
+  </data>
+  <data name="CALIBRATION_FAIL_NO_MESSAGE" xml:space="preserve">
+    <value>پیمانہ بندی کا عمَل ناکام ہوگیا!</value>
+  </data>
+  <data name="CALIBRATION_SUCCESS" xml:space="preserve">
+    <value>پیمانہ بندی کا عمَل کامیاب!</value>
+  </data>
+  <data name="POLISH_POLAND" xml:space="preserve">
+    <value>پولینڈ کی زبان (پولینڈ) / Polski (Polska)</value>
+  </data>
+  <data name="POLISH_POLAND_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>پولینڈ کی زبان
+(پولینڈ) /
+Polski
+(Polska)</value>
+  </data>
+  <data name="PORTUGUESE_PORTUGAL" xml:space="preserve">
+    <value>پرتگالی (پرتگال) /Português (Portugal)</value>
+  </data>
+  <data name="PORTUGUESE_PORTUGAL_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>پرتگالی
+ (پرتگال) /
+Português
+(Portugal)</value>
+  </data>
+  <data name="SLOVAK_SLOVAKIA" xml:space="preserve">
+    <value>سلوواکی (سلوواک) / Slovenčina (Slovensko)</value>
+  </data>
+  <data name="SLOVAK_SLOVAKIA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>سلوواکی
+ا (سلوواک) /
+ Slovenčina
+(Slovensko)</value>
+  </data>
+  <data name="ALIENWARE_17" xml:space="preserve">
+    <value>Alienware 17 (EyeX)</value>
+  </data>
+  <data name="STEELSERIES_SENTRY" xml:space="preserve">
+    <value>فولادی سلسلے کا سنتری ( آنکھ# EyeX)</value>
+  </data>
+  <data name="TOBII_EYE_TRACKER_4C" xml:space="preserve">
+    <value>ٹوبی عینی ناظر Tobii Eye Tracker 4C</value>
+  </data>
+  <data name="TOBII_PCEYE_MINI" xml:space="preserve">
+    <value> ٹوبی کمپیوٹری آنکھ/ چھوٹا Tobii PCEye Mini</value>
+  </data>
+  <data name="TOBII_X2_30" xml:space="preserve">
+    <value>ٹوبی Tobii X2-30</value>
+  </data>
+  <data name="TOBII_X2_60" xml:space="preserve">
+    <value>ٹوبی Tobii X2-60</value>
+  </data>
+  <data name="FORCE_CAPS_LOCK" xml:space="preserve">
+    <value>بڑے حروف کی کلید کو با عمل بنائیں (شفٹ کی کلید کو مقفل کریں)</value>
+  </data>
+  <data name="USE_ALPHABETICAL_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>حروف تہجی کی تختی کی کلیدی  ترتیب استعمال کریں</value>
+  </data>
+  <data name="TOGGLE_MANUAL_MODE" xml:space="preserve">
+    <value> دستی طریقہ اختیار کریں/Toggle</value>
+  </data>
+  <data name="CZECH_CZECH_REPUBLIC" xml:space="preserve">
+    <value>چیک (چیک جمہوریہ) / Čeština (Česko)</value>
+  </data>
+  <data name="CZECH_CZECH_REPUBLIC_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>چیکو 
+(چیک جمہوریہ) /
+ Čeština 
+(Česko)</value>
+  </data>
+  <data name="MANUAL_MODE_CHANGED" xml:space="preserve">
+    <value>Input/داخل کرنے کا طریقہ بدل گیا ہے</value>
+  </data>
+  <data name="MANUAL_MODE_DISABLED" xml:space="preserve">
+    <value>دستی (ماؤس) طریقہ غیر فعال!</value>
+  </data>
+  <data name="MANUAL_MODE_ENABLED" xml:space="preserve">
+    <value>دستی (ماؤس) طریقہ فعال!</value>
+  </data>
+  <data name="CONVERSATION_CONFIRM_ENABLE_LABEL" xml:space="preserve">
+    <value>گفتگو کی تصدیق کی کلیدی تختی کو فعال کیا جائے؟</value>
+  </data>
+  <data name="CONVERSATION_CONFIRM_ONLY_MODE_LABEL" xml:space="preserve">
+    <value>یہ انداز صرف گفتگو کی توثیق کا ہے:</value>
+  </data>
+  <data name="ENABLE_QUIT_KEYS_LABEL" xml:space="preserve">
+    <value>Quit / بند کرنے کی کلیدیں فعال کر دی جائیں؟</value>
+  </data>
+  <data name="USE_SIMPLIFIED_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>آسان کی ہوئی کلیدی تختی کی ترتیب استعمال کریں</value>
+  </data>
+  <data name="BROWSER_BACK_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>براؤزر 
+پیچھے کی طرف</value>
+  </data>
+  <data name="BROWSER_FORWARD_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>براؤزر 
+آگے کی طرف</value>
+  </data>
+  <data name="BROWSER_HOME_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>براؤزر
+گھر Home</value>
+  </data>
+  <data name="BROWSER_SEARCH_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>براؤزر 
+تلاش</value>
+  </data>
+  <data name="WEB_BROWSING_LAYOUT" xml:space="preserve">
+    <value>ویب براؤزنگ</value>
+  </data>
+  <data name="WEB_BROWSING_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>ویب
+براؤزنگ</value>
+  </data>
+  <data name="MARYTTS_ENABLED_LABEL" xml:space="preserve">
+    <value>"میری تحریر سے تقریر" MaryTTS  مصنوعی گفتار کا آلہ استعمال کیا جائے؟</value>
+  </data>
+  <data name="MARYTTS_VOICE_LABEL" xml:space="preserve">
+    <value>"میری تحریر سے تقریر" MaryTTS کی آواز:</value>
+  </data>
+  <data name="MARYTTS_LOCATION_LABEL" xml:space="preserve">
+    <value>"میری تحریر سے تقریر" MaryTTS اس  مقام پر ہے (marytts-server.bat):</value>
+  </data>
+  <data name="MARYTTS_LOCATION_FIND_LABEL" xml:space="preserve">
+    <value>تلاش کرو</value>
+  </data>
+  <data name="MARYTTS_LOCATION_ERROR_LABEL" xml:space="preserve">
+    <value>غلطی: ایک درست 'marytts-server.bat' فائل منتخب نہیں  کی گئی تھی. دوبارہ کوشش کریں.</value>
+  </data>
+  <data name="BASIC_SUGGESTION" xml:space="preserve">
+    <value>بنیادی</value>
+  </data>
+  <data name="NGRAM_SUGGESTION" xml:space="preserve">
+    <value>لفظی تقلیب Anagram</value>
+  </data>
+  <data name="PRESAGE_SUGGESTION" xml:space="preserve">
+    <value>پیش بین Presage</value>
+  </data>
+  <data name="SUGGESTION_METHOD" xml:space="preserve">
+    <value>مشورے کا طریقہ:</value>
+  </data>
+  <data name="MARYTTS_UNAVAILABLE" xml:space="preserve">
+    <value>"میری تحریر سے تقریر" MaryTTS دستیاب نہیں ہے</value>
+  </data>
+  <data name="PRESAGE_UNAVAILABLE" xml:space="preserve">
+    <value>پیش بین Presage  الفاظ کی پیشگوئیوں کے لئے دستیاب نہیں ہے</value>
+  </data>
+  <data name="USING_DEFAULT_SUGGESTION_METHOD" xml:space="preserve">
+    <value>تجویز کرنے کے طریقہ کار کو ترتیب دیں: {0}
+ .آپ اسے واپس تبدیل کرسکتے ہیں.
+انتظامی مرکز/مینجمنٹ کنسول (ALT + M) سے.</value>
+  </data>
+  <data name="USING_DEFAULT_VOICE" xml:space="preserve">
+    <value>تقریر کی آواز کو نظام/سسٹم کی آواز پر ترتیب دیں: {0}
+آپ دیکھ سکتے ہیں کہ"میری تحریر سے تقریر" MaryTTS  کہاں ہے
+ اور آواز کوواپس تبدیل کرسکتے ہیں.
+انتظامی مرکز/ مینجمنٹ کنسول (ALT + M) سے.</value>
+  </data>
+  <data name="SPEECH_DELAY_LABEL" xml:space="preserve">
+    <value>تقریر سے پہلے تاخیر (ملی سیکنڈ):</value>
+  </data>
+  <data name="USE_COMMUNIKATE_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>کمیونیکٹ CommuniKate کلیدی تختی کی ترتیب استعمال کریں</value>
+  </data>
+  <data name="ENABLE_COMMUNIKATE_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>کمیونیکٹ CommuniKate کلیدی تختی کی ترتیب فعال کریں:</value>
+  </data>
+  <data name="COMMUNIKATE_TOPPAGE_LABEL" xml:space="preserve">
+    <value>کمیونیکیٹ CommuniKate کے سب سےاوپر صفحے کی obf فائل:</value>
+  </data>
+  <data name="COMMUNIKATE_TOPPAGE_LOCATION_ERROR_LABEL" xml:space="preserve">
+    <value>غلط فائل</value>
+  </data>
+  <data name="COMMUNIKATE_TOPPAGE_LOCATION_LABEL" xml:space="preserve">
+    <value>کمیونیکیٹ CommuniKate کے سب سےاوپر صفحے کی obz. فائل  کا مقام:</value>
+  </data>
+  <data name="PRESAGE_CONSTRUCTOR_EXCEPTION_MESSAGE" xml:space="preserve">
+    <value>آپٹیکی پیش بین Presage سے ہاتھ نہیں ملا  سکا۔ اس کی کچھ ممکنہ وجوہ ہو سکتی ہیں:
+1۔ DBFILENAME کا پتہ/مقام جسے پیش بین فائل presage.xml (جو یہاں موجود ہے C:\Users\USER_NAME\.presage) میں درج کیا گیا ہے اپنا وجود نہیں رکھتا-  براہ مہربانی اس کی جانچ پڑتال کر کے اسے صحیح کریں (یا پیش بین Presage کو نکال کر دوبارہ ڈالیں)-
+2۔ یا تو پیش بین Presage کا 64 بٹ bit والا نسخہ ڈالا گیا ہے (آپٹیکی صرف 32 بٹ bit والا نسخہ قبول کرتا ہے) اور یا پیش بین Presage کی فائلیں ہٹا دی گئی ہیں/مٹا دی گئی ہیں/مسخ ہو گئی ہیں۔
+
+براہ مہربانی پیش بین Presage کو نکال کے 32 بٹ bit والا نسخہ 0.9.2 ڈالیں۔
+ آپٹیکی کوشش کرے گا کہ چلتا رہے لیکن یہ بھی ممکن ہے کہ جلد ہی گر جائے۔
+اگلی بار پیش گوئی کا طریقہ بدل کے NGram کر دیا جائے گا تا کہ آپٹیکی دوبارہ نہ گر جائے۔</value>
+  </data>
+  <data name="PRESAGE_CONSTRUCTOR_EXCEPTION_TITLE" xml:space="preserve">
+    <value>  پیش بین Presage کے ساتھ ایک مسئلہ ہے</value>
+  </data>
+  <data name="DYNAMIC_KEYBOARDS_LOCATION_LABEL" xml:space="preserve">
+    <value>فولڈر جس میں متحرک  تختیاں شامل ہیں:</value>
+  </data>
+  <data name="PLUGINS_LOCATION_LABEL" xml:space="preserve">
+    <value>فولڈر جس میں اضافی سہولتیں plugins  شامل ہیں:</value>
+  </data>
+  <data name="TOBII_PCEYE_GO_PLUS" xml:space="preserve">
+    <value>ٹوبی کمپیوٹری آنکھ پلس Tobii PCEye Plus</value>
+  </data>
+  <data name="ALPHA_2" xml:space="preserve">
+    <value>حروف 2</value>
+  </data>
+  <data name="CONVERSATION_ALPHA_2" xml:space="preserve">
+    <value>گفتگو الف 2</value>
+  </data>
+  <data name="DISCARD_CHANGED_SETTINGS" xml:space="preserve">
+    <value> ترتیبات میں کی گئی تمام تبدیلیاں رد کردی جائیں گی، کیا آپ جاری رکھنا چاہتے ہیں؟</value>
+  </data>
+  <data name="SETTINGS_CHANGED" xml:space="preserve">
+    <value>ترتیبات کو منسوخ کریں</value>
+  </data>
+  <data name="DICTIONARY_IS_PRESAGE" xml:space="preserve">
+    <value>پیش بین Presage کی لغات کو یہاں سے نہیں بدلا جا سکتا. 
+اس کا طے شدہ default مقام "C: \ Program Files (x86) \ presage \ share \ presage \ database_en.db" ہے. 
+اس میں ایک ایسے پروگرام  کی مدد سے ترمیم کی جا سکتی ہے جو SQLite فارمیٹ 3 فائلوں کو پڑھ سکے . 
+جیسا کہ "DB Browser for SQLite"  (جو ایک مفت پروگرام ہے).</value>
+  </data>
+  <data name="ALPHA" xml:space="preserve">
+    <value>حروف</value>
+  </data>
+  <data name="ERROR_MAGNIFYING" xml:space="preserve">
+    <value>کلاں کاری کی کارروائی کے دوران ایک غلطی واقع ہوئی ہے۔ براہ کرم  کلاں کاری کو غیر فعال کریں اور مزید مدد کے لئے آپٹمکی سے رابطہ کریں</value>
+  </data>
+  <data name="ERROR_TITLE" xml:space="preserve">
+    <value>غلطی:</value>
+  </data>
+  <data name="ATTENTION_SOUND_LABEL" xml:space="preserve">
+    <value>توجہ:</value>
+  </data>
+  <data name="ENABLE_ATTENTION_KEY_LABEL" xml:space="preserve">
+    <value>توجہ کی کلید کو فعال  کیا جائے؟</value>
+  </data>
+  <data name="ENABLE_COPY_SCRATCHPAD_KEY_LABEL" xml:space="preserve">
+    <value> سکریچ پیڈ کی کلید کی نقل کو ممکن بنایا جائے؟</value>
+  </data>
+  <data name="ATTENTION" xml:space="preserve">
+    <value>توجہ</value>
+  </data>
+  <data name="ATTENTION_SOUND" xml:space="preserve">
+    <value>توجہ</value>
+  </data>
+  <data name="COMMUNIKATE_DISABLED" xml:space="preserve">
+    <value>کمیونیکیٹ CommuniKate فی الحال نا قابل استعمال ہے (عام تختی QWERTY  استعمال کریں)</value>
+  </data>
+  <data name="KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>ٹائپ کرنے کے لئے کلیدی تختی کا انداز:</value>
+  </data>
+  <data name="USE_DEFAULT_KEYBOARD_LAYOUT" xml:space="preserve">
+    <value>طے شدہ default تختی کی کلیدی ترتیب استعمال کریں</value>
+  </data>
+  <data name="STARTUP_CRASH_TITLE" xml:space="preserve">
+    <value>اوہ! شروع ہوتے وقت ہمیں یہ غلطیاں ملی ہیں:</value>
+  </data>
+  <data name="SELECT_VOICE" xml:space="preserve">
+    <value> آواز چنیں</value>
+  </data>
+  <data name="MORE" xml:space="preserve">
+    <value> مزید...</value>
+  </data>
+  <data name="LANGUAGE_AND_VOICE" xml:space="preserve">
+    <value> زبان اور آواز</value>
+  </data>
+  <data name="LANGUAGE_AND_VOICE_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> زبان
+اور آواز</value>
+  </data>
+  <data name="LANGUAGE_AND_VOICE_UPPER_CASE" xml:space="preserve">
+    <value>زبان اور آواز</value>
+  </data>
+  <data name="MORE_UPPER_CASE" xml:space="preserve">
+    <value> مزید... </value>
+  </data>
+  <data name="DISPLAY_VOICES_WHEN_CHANGING_KEYBOARD_LANGUAGE" xml:space="preserve">
+    <value>آوازوں کا مظاہرہ کرو کلیدی تختی کی زبان بدلتے وقت</value>
+  </data>
+  <data name="LOOK_TO_SCROLL" xml:space="preserve">
+    <value>سکرول کرنے کے لئے دیکھیں</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ENABLED_LABEL" xml:space="preserve">
+    <value> "سکرول کرنے کے لئے دیکھنے" کا کوئی اور طریقہ اختیار کریں</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_CENTRE_MOUSE_WHEN_ACTIVATED_LABEL" xml:space="preserve">
+    <value> سکرول کرنے سے پہلے کرسر کو سکرین کے وسط میں مردہ پٹی کے مرکزمیں کر دیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BRING_WINDOW_TO_FRONT_WHEN_ACTIVATED_LABEL" xml:space="preserve">
+    <value> دریچے window کے اندر سکرول کرنے سے پہلے اسے سامنے لے کے آئیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_RESUME_AFTER_CHOOSING_POINT_FOR_MOUSE_LABEL" xml:space="preserve">
+    <value>بعد میں خود کار طرز پہ دوبارہ سکرول کرنا شروع کر دیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_DEACTIVATE_UPON_SWITCHING_KEYBOARDS_LABEL" xml:space="preserve">
+    <value>کلیدی تختیاں بدلتے وقت  سکرول کرنا بند کر دیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_OVERLAY_BOUNDS_THICKNESS_LABEL" xml:space="preserve">
+    <value>سکرول کی حدوں کی چوڑائی جنہیں معلق دریچے window  پر کھہینچا گیا ہے</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_OVERLAY_DEADZONE_THICKNESS_LABEL" xml:space="preserve">
+    <value>مردہ پٹی کی حدود کی چوڑائی جنہیں معلق دریچے window پر کھہینچا گیا ہے</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_HORIZONTAL_DEADZONE_LABEL" xml:space="preserve">
+    <value> افقی مردہ پٹی  (پکسل میں)</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_VERTICAL_DEADZONE_LABEL" xml:space="preserve">
+    <value>عمودی مردہ پٹی (پکسل میں)</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ACTIVE_KEY_TEXT" xml:space="preserve">
+    <value> دیکھیں
+سکرول کرنا</value>
+  </data>
+  <data name="FRENCH_CANADA" xml:space="preserve">
+    <value>فرانسیسی (کینیڈا) / (Française (Canada</value>
+  </data>
+  <data name="FRENCH_CANADA_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>فرانسیسی
+(کینیڈا) /
+Française
+ (کینیڈا)</value>
+  </data>
+  <data name="JAPANESE_JAPAN" xml:space="preserve">
+    <value> جاپانی (جاپان) / 日本語 (日本)</value>
+  </data>
+  <data name="JAPANESE_JAPAN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>جاپانی
+(جاپان) /
+日本語
+(日本)</value>
+  </data>
+  <data name="COMMUNIKATE_SOUND_VOLUME_LABEL" xml:space="preserve">
+    <value> کمیونیکیٹ  CommuniKate  کی آواز کا اتار چڑہاؤ:</value>
+  </data>
+  <data name="COMMUNIKATE_SPEAK_SELECTED_LABEL" xml:space="preserve">
+    <value>جب کمیونیکیٹ کے بٹن کو چنا جائے تو یہاں کی تحریر کو بآواز بلند پڑھو:</value>
+  </data>
+  <data name="COMMUNIKATE_SPEAK_SELECTED_RATE_LABEL" xml:space="preserve">
+    <value> کمیونیکیٹ CommuniKate کے بٹن کی تحریر کو پڑھے جانے کی رفتار:</value>
+  </data>
+  <data name="COMMUNIKATE_SPEAK_SELECTED_VOLUME_LABEL" xml:space="preserve">
+    <value> کمیونیکیٹ CommuniKate کے بٹن کی تحریر کوپڑھتے ہوئے آواز کی  بلندی:</value>
+  </data>
+  <data name="MANUAL_MODE_MESSAGE" xml:space="preserve">
+    <value> آپ کو یقین ہے کہ آپ کارروائی اپنے ہاتھ میں لینا چاہتے ہیں یا اس سے دستبردار ہونا چاہتے ہیں؟</value>
+  </data>
+  <data name="MANUAL_MODE" xml:space="preserve">
+    <value> دستی انداز (کارروائی آپ کے ہاتھ میں)</value>
+  </data>
+  <data name="COMMUNIKATE" xml:space="preserve">
+    <value> کمیونیکیٹ CommuniKate</value>
+  </data>
+  <data name="PRESAGE_DATABASE_LOCATION_LABEL" xml:space="preserve">
+    <value> پیش بین Presage  ڈیٹا گھر database کی db. فائل کا مقام:</value>
+  </data>
+  <data name="PRESAGE_NUMBER_OF_SUGGESTIONS_LABEL" xml:space="preserve">
+    <value> دکھانے کے لئے پیش بین Presage کی تجاویز کی تعداد:</value>
+  </data>
+  <data name="AVAILABLE_PLUGINS_LABEL" xml:space="preserve">
+    <value> مہیا کی گئی اضافی سہولیات Plugins </value>
+  </data>
+  <data name="PLUGINS_LABEL" xml:space="preserve">
+    <value>اضافی سہولیات Plugins</value>
+  </data>
+  <data name="REFRESH_PLUGINS_BUTTON" xml:space="preserve">
+    <value> اضافی سہولیات Plugins کو تازہ دم کریں</value>
+  </data>
+  <data name="RESTART" xml:space="preserve">
+    <value> دوبارہ شروع کریں</value>
+  </data>
+  <data name="REFRESH_CONFIRMATION_MESSAGE" xml:space="preserve">
+    <value> آپ کو پورا یقین ہے کہ آپ آپٹیکی کو دوبارہ شروع کرنا چاہتے ہیں؟ </value>
+  </data>
+  <data name="REFRESH_MESSAGE" xml:space="preserve">
+    <value> آپ کو یقین ہے کہ آپ آپٹیکی کو دوبارہ شروع کرنا چاہتے ہیں؟ </value>
+  </data>
+  <data name="DYNAMIC_KEYBOARD" xml:space="preserve">
+    <value> متحرک کلیدی تختی DYNAMIC KEYBOARD</value>
+  </data>
+  <data name="WEB_BROWSING" xml:space="preserve">
+    <value> سائبر خانوں کی گشت WEB BROWSING</value>
+  </data>
+  <data name="UKRAINIAN_UKRAINE" xml:space="preserve">
+    <value> یوکرائنی (یوکرائن) /  Українська (Україна)</value>
+  </data>
+  <data name="UKRAINIAN_UKRAINE_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> یوکرائنی
+ (یوکرائن) /
+Українська
+(Україна)</value>
+  </data>
+  <data name="IRISBOND_DATA_STREAM_PROCESSING_LEVEL" xml:space="preserve">
+    <value>رواں ڈیٹا سے نبٹنے کی کارروائی کا پیمانہ:</value>
+  </data>
+  <data name="IRISBOND_DUO" xml:space="preserve">
+    <value> عینیہ کاری کا آلہ Irisbond Duo</value>
+  </data>
+  <data name="IRISBOND_TRACKER_COULD_NOT_BE_STARTED" xml:space="preserve">
+    <value> عینیہ کاری کا آلہ Irisbond Duo چالو نہیں ہو سکا</value>
+  </data>
+  <data name="IRISBOND_TRACKER_NOT_FOUND" xml:space="preserve">
+    <value>عینیہ کاری کا آلہ Irisbond Duo نہیں مل سکا- مہربانی کر کے یہ دیکھیئے کہ اس کا برقی رابطہ/ کنکشن بر قرار ہے، پھر دوبارہ کوشش کریں</value>
+  </data>
+  <data name="IRISBOND_CALIBRATION_COMPLETE" xml:space="preserve">
+    <value> پیمانہ بندی  مکمل ہو گئی ہے (کامیابی یا ناکامی)، لیکن سب کچھ صحیح کام کر رہا ہے!</value>
+  </data>
+  <data name="COPY_ALL_FROM_SCRATCHPAD" xml:space="preserve">
+    <value> سب کچھ نقل کرو</value>
+  </data>
+  <data name="DYNAMIC_KEYBOARD_DEFINITION_INVALID" xml:space="preserve">
+    <value> متحرک کلیدی تختی کی تعریف قا بل قبول نہیں </value>
+  </data>
+  <data name="DYNAMIC_KEYBOARD_HEIGHT_ABOVE_THRESHOLD" xml:space="preserve">
+    <value> اس متحرک کلیدی تختی کی معین کردہ اونچائی حدود سے تجاوز کئے ہوئے ہے  (سکرین کے ٪95 سے بڑی)</value>
+  </data>
+  <data name="RESTART_UPPERCASE" xml:space="preserve">
+    <value> دوبارہ شروع کریں</value>
+  </data>
+  <data name="URDU_PAKISTAN" xml:space="preserve">
+    <value> اردو (پاکستان) /  اردو (پاکستان)</value>
+  </data>
+  <data name="URDU_PAKISTAN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value> اردو
+ (پاکستان)/
+ اردو
+ (پاکستان)</value>
+  </data>
+  <data name="DEFAULT_UILANGUAGE_TO_URDU" xml:space="preserve">
+    <value> ہمارا مشورہ ہے کہ آپ صارف سے رابطے کی زبان (User Interface language) بدل کر اردو کر دیں تا کہ  ٹائپ کئے ہوئے اردو الفاظ  آپٹیکی کے بالائی حصے scratchpad میں دائیں سے بائیں حرکت کریں-
+  کیا آپ پسند کریں گے کہ آپٹیکی خود ہی اردو کو بطور صارف سے رابطے کی زبان نامزد کر دے؟</value>
+  </data>
+  <data name="FONTFAMILY_IS_NOT_COMPATIBLE_WITH_URDU_LANGUAGE" xml:space="preserve">
+    <value> ہمارا مشورہ ہے کہ آپٹیکی میں آپ ایسا فونٹ استعمال کریں جو مکمل طور پہ اردو سے مطابقت رکھتا ہے-
+ اگر فونٹ پوری طرح اردو سے مطابقت نہیں رکھتا تو بہت ممکن ہے کہ الفاظ ، اورخاص طور پہ ہندسے، صحیح  نظر نہ آئیں۔ 
+ کیا آپ پسند کریں گے کہ آپٹیکی خود ہی "نفیس ویب نسخ" کو بحیثیت فونٹ نامزد کر دے؟</value>
+  </data>
+  <data name="LANGUAGE_SPECIFIC_FONT_RECOMMENDED" xml:space="preserve">
+    <value>ہمارا مشورہ ہے کہ آپ ایسا فونٹ استعمال کریں جو پوری طرح زبان سے مطابقت رکھتا ہو</value>
+  </data>
+  <data name="UILANGUAGE_AND_KEYBOARDANDDICTIONARYLANGUAGE_DIFFER_TITLE" xml:space="preserve">
+    <value>صارف سے رابطے کی زبان (UI language) اور تختی/ لغات کی زبان مختلف ہیں</value>
+  </data>
+  <data name="TYPE_DIACRITICS_AFTER_LETTERS" xml:space="preserve">
+    <value>اعراب کے نشانات کو حرف ٹائپ کرنے کے پعد لگائیے</value>
+  </data>
+  <data name="DEFAULT_UILANGUAGE_TO_PERSIAN" xml:space="preserve">
+    <value> ہمارا مشورہ ہے کہ آپ صارف سے رابطے کی زبان (User Interface language) بدل کر فارسی کر دیں تا کہ ٹائپ کئے ہوئے فارسی الفاظ آپٹیکی کے بالائی حصے scratchpad میں دائیں سے بائیں حرکت کریں-
+کیا آپ پسند کریں گے کہ آپٹیکی خود ہی  فارسی کو بطور صارف سے رابطے کی زبان نامزد کر دے؟</value>
+  </data>
+  <data name="FONTFAMILY_IS_NOT_COMPATIBLE_WITH_PERSIAN_LANGUAGE" xml:space="preserve">
+    <value>ہمارا مشورہ ہے کہ آپٹیکی میں آپ ایسا فونٹ استعمال کریں جو مکمل طور پہ فارسی سے مطابقت رکھتا ہے-
+اگر فونٹ پوری طرح فارسی سے مطابقت نہیں رکھتا تو بہت ممکن ہے کہ الفاظ ، اورخاص طور پہ ہندسے، صحیح نظر نہ آئیں۔ 
+کیا آپ پسند کریں گے کہ آپٹیکی خود ہی " نازلی" کو بحیثیت فونٹ نامزد کر دے؟ </value>
+  </data>
+  <data name="PERSIAN_IRAN" xml:space="preserve">
+    <value>فارسی (ایران) / فارسی (ایران)</value>
+  </data>
+  <data name="PERSIAN_IRAN_SPLIT_WITH_NEWLINE" xml:space="preserve">
+    <value>فارسی
+ (ایران)/
+فارسی
+ (ایران)</value>
+  </data>
+  <data name="OPTIKEY_CHAT_DESCRIPTION" xml:space="preserve">
+    <value>آرام سے مواصلات</value>
+  </data>
+  <data name="OPTIKEY_MOUSE_DESCRIPTION" xml:space="preserve">
+    <value>مکمل کرسر کنٹرول</value>
+  </data>
+  <data name="OPTIKEY_SYMBOL_DESCRIPTION" xml:space="preserve">
+    <value>نشان کے ساتھ مواصلات</value>
+  </data>
+  <data name="ALIENWARE_17_INFO" xml:space="preserve">
+    <value>یہ بلٹ میں Tobii آنکھ ٹریکر کا استعمال کرتے ہوئے، ایک Alienware کے 17 گیمنگ لیپ ٹاپ کی ضرورت ہے.</value>
+  </data>
+  <data name="GAZE_TRACKER_INFO" xml:space="preserve">
+    <value>یہ اوپن سورس آنکھ جیسے ویب کیمز اور videocameras بند شیلف کے اجزاء کا استعمال کرتے ہوئے سے باخبر رہنے کے کے لئے ایک فریم ورک ہے جو آئٹییو Gaze کی ٹریکنگ لائبریری، کی ضرورت ہے.</value>
+  </data>
+  <data name="IRISBOND_DUO_INFO" xml:space="preserve">
+    <value>آپ Irisbond جوڑی آنکھ ٹریکر کے ساتھ Optikey استعمال کرنے کا ارادہ ہو تو براہ مہربانی آپ Irisbond جوڑی ڈرائیوروں نصب ہے براہ کرم یقینی بنائیں. یہ https://www.irisbond.com/en/producto/irisbond-duo-2 سے ڈاؤن لوڈ کیا جا سکتا ہے.</value>
+  </data>
+  <data name="MOUSE_POSITION_INFO" xml:space="preserve">
+    <value>اس موڈ میں، Optikey ایک آنکھ ٹریکر سے براہ راست بات کرنے کی بجائے ان پٹ کے طور پر ماؤس کرسر کا استعمال کریں گے. تم یہ چاہتے ہو سکتا ہے آپ Optikey باہر کی جانچ کر رہے ہیں، یا اگر آپ اس طرح کے طور پر ایک سر ماؤس یا کسی بھی آنکھ کی اس فہرست میں نہیں ٹریکر ایک متبادل ان پٹ ڈیوائس کے ساتھ اس کا استعمال کرنا چاہتے ہیں.</value>
+  </data>
+  <data name="TOBII_ASSISTIVE_INFO" xml:space="preserve">
+    <value>ایک معاون آنکھ ٹریکر کے ساتھ Optikey کو استعمال کرنے کے لئے، آپ کو یا تو Tobii Windows Control کے کنٹرول، یا Tobii آنکھ سے باخبر رکھنے کے انجن کا نیا ورژن کی ضرورت ہے. آپ Tobii ونڈوز کے Tobii Windows Control کی درخواست (Tobii Gaze Interaction Software) کے پرانے ورژن استعمال کرنے کے لئے کی ضرورت ہے تو، پھر آپ کو اس کی بجائے ماؤس پوزیشن کو استعمال کرتے ہوئے Optikey کو کنٹرول </value>
+  </data>
+  <data name="TOBII_EYEX_INFO" xml:space="preserve">
+    <value>یہ آپشن کسی بھی Tobii گیمنگ آنکھ ٹریکر (4C، EyeX، Alienware کے SteelSeries ہے، وغیرہ) کے ساتھ کام کریں گے</value>
+  </data>
+  <data name="VI_MYGAZE_INFO" xml:space="preserve">
+    <value>آپ نے پہلے ہی myGaze کلائنٹ ڈرائیوروں، جس میں اب کوئی ڈاؤن لوڈ کے لئے دستیاب ہیں نصب ہے تو بصری تعامل myGaze صرف حمایت کی ہے. اگر آپ ان کے ڈرائیوروں نصب نہیں ہے تو، آپ کو استعمال کے 'ماؤس پوزیشن' کو منتخب کرنا چاہئے بجائے، اور کرسر کو منتقل کرنے myGaze EyeMousePlay درخواست کے ساتھ مجموعہ میں Optikey استعمال کرتے ہیں.</value>
+  </data>
+  <data name="OTHER_TRACKER" xml:space="preserve">
+    <value> اگر آپ کے آئی ٹریکر کو یہاں درج نہیں کیا گیا ہے ، یا آپ کو اوپٹکی کے 32 بٹ ورژن کی ضرورت ہے تو ، مزید معلومات کے لئے نیچے دیئے گئے لنک پر کلک کریں۔
+اگر آپ تنصیب کے ساتھ جاری رکھنا چاہتے ہیں تو ، آپٹکی کو آپ کے ماؤس کی پوزیشن کے ذریعہ کنٹرول کیا جائے گا۔ اس سے یہ متبادل آدانوں جیسے ہیڈ ماؤس ، یا کوئی آئی ٹریکر کے ساتھ کام کرنے کی اجازت دیتا ہے جو آپ کو اپنی آنکھوں سے ماؤس کی پوزیشن پر قابو پانے کی اجازت دیتا ہے۔</value>
+  </data>
+  <data name="TOBII_EYEX_ENGINE_NOT_FOUND" xml:space="preserve">
+    <value>بینائی کا انجن Tobii service نہیں مل سکا. براہ مہربانی بینائی کا انجن Tobii software نصب کریں اور دوبارہ کوشش کریں.</value>
+  </data>
+  <data name="TOBII_EYEX_ENGINE_NOT_RUNNING" xml:space="preserve">
+    <value>بینائی کا انجن Tobii service نہیں چل رہا ہے. براہ مہربانی بینائی کا انجن service شروع کریں اور دوبارہ کوشش کریں.</value>
+  </data>
+  <data name="KALMAN_FILTER_ENABLED" xml:space="preserve">
+    <value>کلمان فلٹرKalman Filter:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_DIRECTION_INVERTED_LABEL" xml:space="preserve">
+    <value>سکرول کرنے کا رخ مخایف سمت کر دیں</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_LOCK_DOWN_BOUNDS_KEY_LABEL" xml:space="preserve">
+    <value> حدود کی کلید کو مقفل کر دیں تا کہ منتخب کیا ہوا نقطہ، دریجہ window یا رقبہ region محفوظ کیا جا سکے:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BRING_WINDOW_TO_FRONT_AFTER_CHOOSING_SCREENPOINT_LABEL" xml:space="preserve">
+    <value>سکرین کا نقطہ چننے کے بعد وہاں موجود دریچے window کو سامنے لے کر آئیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SUSPEND_BEFORE_CHOOSING_POINT_FOR_MOUSE_LABEL" xml:space="preserve">
+    <value> سکرول کرنا بند کر دیں جب یہ چننا ہو کہ کہاں جانا ہے یا کلک کرنا ہے یا ماؤس کو گھسیٹنا ہے:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SHOW_OVERLAY_WINDOW_LABEL" xml:space="preserve">
+    <value>سکرین پہ  معلق دریچہ window ، جس میں ہدایات درج ہوں، دکھائیں (پھر سے آغاز کرنا ہو گا):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_OVERLAY_BOUNDS_COLOUR_LABEL" xml:space="preserve">
+    <value>سکرول کی حدوں کا رنگ جنہیں معلق دریچے window پر کھہینچا گیا ہے:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_OVERLAY_DEADZONE_COLOUR_LABEL" xml:space="preserve">
+    <value> مردہ پٹی کی حدود جنہیں معلق دریچے window پر کھہینچا گیا ہے</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_INCREMENT_CHOICES_LABEL" xml:space="preserve">
+    <value> سکرول کے ان اضافوں سے گزرتے جائیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BASE_SPEED_SLOW_LABEL" xml:space="preserve">
+    <value>'مدہم' اساسی رفتار (کلک فی سیکنڈ میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BASE_SPEED_MEDIUM_LABEL" xml:space="preserve">
+    <value>'درمیانی' اساسی رفتار (کلک فی سیکنڈ میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BASE_SPEED_FAST_LABEL" xml:space="preserve">
+    <value>' تیز' اساسی رفتار (کلک فی سیکنڈ میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ACCELERATION_SLOW_LABEL" xml:space="preserve">
+    <value>'مدہم'  اسراع/ سرعت (مردہ پٹی سے 'کلک فی سیکنڈ فی پکسل' میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ACCELERATION_MEDIUM_LABEL" xml:space="preserve">
+    <value>'درمیانی' اسراع/ سرعت (مردہ پٹی سے 'کلک فی سیکنڈ فی پکسل' میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ACCELERATION_FAST_LABEL" xml:space="preserve">
+    <value>'تیز' اسراع/ سرعت (مردہ پٹی سے 'کلک فی سیکنڈ فی پکسل' میں):</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_KEY_GROUP" xml:space="preserve">
+    <value> سکرول کی کلیدوں کودیکھیں:</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_ACTIVE_KEY_GROUP_LABEL" xml:space="preserve">
+    <value>سکرول کرنا فعال/غیر فعال کریں</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_GROUP_LABEL" xml:space="preserve">
+    <value> اگلی حدود </value>
+  </data>
+  <data name="LOOK_TO_SCROLL_INCREMENT_KEY_GROUP_LABEL" xml:space="preserve">
+    <value> اگلا اضافہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_MODE_KEY_GROUP_LABEL" xml:space="preserve">
+    <value> اگلا انداز MODE</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SPEED_KEY_GROUP_LABEL" xml:space="preserve">
+    <value> اگلی رفتار</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_INCREMENT_KEY_FORMAT" xml:space="preserve">
+    <value>اتنا سکرول کریں {0} پہیے کی اکائی:
+(1 کلک = 120 پہئیے کی اکائیاں)|اتنا سکرول کریں {0}  پہیے کی اکائیاں
+(120 پہیے کی اکائیاں = 1 کلک)</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_TEXT_SCREENPOINT" xml:space="preserve">
+    <value>سکرین  اس پر
+ نقطہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_TEXT_SCREENCENTRED" xml:space="preserve">
+    <value> سکرین
+درمیان میں</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_TEXT_WINDOW" xml:space="preserve">
+    <value>دریجہ window</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_TEXT_SUBWINDOW" xml:space="preserve">
+    <value>Window دریجہ 
+ رقبہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_BOUNDS_KEY_TEXT_CUSTOM" xml:space="preserve">
+    <value>  دستور
+ رقبہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_MODE_KEY_TEXT_VERTICAL" xml:space="preserve">
+    <value>عمودی</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_MODE_KEY_TEXT_HORIZONTAL" xml:space="preserve">
+    <value>افقی</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_MODE_KEY_TEXT_CROSS" xml:space="preserve">
+    <value> صلیب</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_MODE_KEY_TEXT_FREE" xml:space="preserve">
+    <value> آزاد</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SPEED_KEY_TEXT_SLOW" xml:space="preserve">
+    <value> آہستہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SPEED_KEY_TEXT_MEDIUM" xml:space="preserve">
+    <value>درمیانہ</value>
+  </data>
+  <data name="LOOK_TO_SCROLL_SPEED_KEY_TEXT_FAST" xml:space="preserve">
+    <value> تیز </value>
+  </data>
+</root>
