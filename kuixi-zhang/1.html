@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>ESP32 Sensor Monitor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+    p {
+      margin: 8px 0;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .box {
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+    .label {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+    .value {
+      font-size: 38px;
+      font-weight: 700;
+      color: #38bdf8;
+      word-break: break-all;
+    }
+    .small {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .status {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.16);
+      color: #7dd3fc;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='card'>
+      <h1>ESP32 传感器数据监测</h1>
+      <p>请连接手机或电脑到 ESP32 热点 <b>ESP32-Sensor</b>，然后打开网页 <b>192.168.4.1</b> 查看实时数据。</p>
+      <div class='status' id='wifiStatus'>正在连接热点</div>
+      <div class='grid'>
+        <div class='box'>
+          <div class='label'>压力传感器原始值</div>
+          <div class='value' id='pressure'>--</div>
+        </div>
+        <div class='box'>
+          <div class='label'>肌电传感器原始值</div>
+          <div class='value' id='emg'>--</div>
+        </div>
+      </div>
+      <div class='small'>数据每 300ms 自动刷新一次。</div>
+    </div>
+  </div>
+  <script>
+    async function updateData() {
+      try {
+        const res = await fetch('/data');
+        const data = await res.json();
+        document.getElementById('pressure').textContent = data.pressure;
+        document.getElementById('emg').textContent = data.emg;
+        document.getElementById('wifiStatus').textContent = '热点已连接';
+      } catch (e) {
+        document.getElementById('wifiStatus').textContent = '数据获取失败';
+      }
+    }
+    updateData();
+    setInterval(updateData, 300);
+  </script>
+</body>
+</html>
