@@ -1,0 +1,103 @@
+#include <WiFi.h>
+#include <esp_wifi.h>
+
+const char* AP_SSID = "ESP32_TEST";
+const char* AP_PASSWORD = "12345678";
+
+void setup() {
+  Serial.begin(115200);
+  delay(3000);
+
+  Serial.println();
+  Serial.println("==============================");
+  Serial.println("ESP32-C3 WiFi HARD TEST");
+  Serial.println("==============================");
+
+  // 关闭 WiFi
+  WiFi.mode(WIFI_OFF);
+  delay(1000);
+
+  // 开启 AP
+  WiFi.mode(WIFI_AP);
+  delay(1000);
+
+  // 设置发射功率
+  esp_wifi_set_max_tx_power(78);
+  delay(500);
+
+  // 创建 AP
+  esp_err_t err = esp_wifi_set_mode(WIFI_MODE_AP);
+
+  Serial.print("set mode result: ");
+  Serial.println(esp_err_to_name(err));
+
+  // AP 配置
+  wifi_config_t ap_config = {};
+
+  strcpy(
+    (char*)ap_config.ap.ssid,
+    AP_SSID
+  );
+
+  strcpy(
+    (char*)ap_config.ap.password,
+    AP_PASSWORD
+  );
+
+  ap_config.ap.ssid_len = strlen(AP_SSID);
+  ap_config.ap.channel = 6;
+  ap_config.ap.authmode = WIFI_AUTH_WPA2_PSK;
+  ap_config.ap.ssid_hidden = 0;
+  ap_config.ap.max_connection = 4;
+  ap_config.ap.beacon_interval = 100;
+
+  err = esp_wifi_set_config(
+    WIFI_IF_AP,
+    &ap_config
+  );
+
+  Serial.print("set config result: ");
+  Serial.println(esp_err_to_name(err));
+
+  // 启动 WiFi
+  err = esp_wifi_start();
+
+  Serial.print("wifi start result: ");
+  Serial.println(esp_err_to_name(err));
+
+  delay(2000);
+
+  Serial.println();
+  Serial.println("========== RESULT ==========");
+
+  Serial.print("SSID: ");
+  Serial.println(AP_SSID);
+
+  Serial.print("Channel: ");
+  Serial.println(ap_config.ap.channel);
+
+  Serial.print("IP: ");
+  Serial.println(WiFi.softAPIP());
+
+  Serial.print("MAC: ");
+  Serial.println(WiFi.softAPmacAddress());
+
+  Serial.println("============================");
+}
+
+void loop() {
+
+  wifi_mode_t mode;
+
+  esp_wifi_get_mode(&mode);
+
+  Serial.print("WiFi mode: ");
+  Serial.print((int)mode);
+
+  Serial.print(" | AP clients: ");
+  Serial.println(
+    WiFi.softAPgetStationNum()
+  );
+
+  delay(3000);
+}

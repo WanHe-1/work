@@ -1,18 +1,24 @@
 #include <Wire.h>
 
 // Arduino Uno 引脚配置
-const int LED = 13;           // 板载 LED
-const int PRESSURE_PIN = A0;  // 压力传感器 AO -> A0
-const int EMG_PIN = A1;       // 肌电传感器 AO -> A1
+const int LED = 13;
+const int PRESSURE_PIN = A0; // 压力传感器 AO -> A0
+const int EMG_PIN = A1;      // 肌电传感器 AO -> A1
 
-const int PRESSURE_THRESHOLD = 1000;
+const int PRESSURE_CHANGE_THRESHOLD = 30;
 const int EMG_CHANGE_THRESHOLD = 60;
 const unsigned long TENS_RUN_TIME_MS = 5000;
+const unsigned long CHANGE_WINDOW_MS = 300;
 
-bool pressureArmed = true;
-int gsrThreshold = 0;
+int pressureBaseline = 0;
+int emgBaseline = 0;
 
-// TENS I2C 数据
+unsigned long pressureChangeTime = 0;
+unsigned long emgChangeTime = 0;
+bool pressureChanged = false;
+bool emgChanged = false;
+bool tensBusy = false;
+
 unsigned char tx1_data[15] = {0xFA, 0x01, 0x61, 0x94, 0x00, 0x14, 0x61, 0x94, 0x00, 0x14, 0x01, 0x01, 0x1E, 0x1E, 0xAF};
 unsigned char Val1_1 = 20;
 unsigned char Val1_2 = 40;
@@ -33,10 +39,12 @@ void tensOff() {
 }
 
 void runTensFor5Seconds() {
+  tensBusy = true;
   Serial.println("TENS_ON");
   sendTensCommand(1, 1);
   delay(TENS_RUN_TIME_MS);
   tensOff();
+  tensBusy = false;
 }
 
 void setup() {
@@ -46,53 +54,64 @@ void setup() {
   digitalWrite(LED, LOW);
   delay(1000);
 
-  // 校准肌电基线（前 2.5 秒平均值）
-  long sum = 0;
-  for (int i = 0; i < 500; i++) {
-    sum += analogRead(EMG_PIN);
+  long pressureSum = 0;
+  long emgSum = 0;
+  for (int i = 0; i < 200; i++) {
+    pressureSum += analogRead(PRESSURE_PIN);
+    emgSum += analogRead(EMG_PIN);
     delay(5);
   }
-  gsrThreshold = sum / 500;
-  Serial.print("EMG threshold = ");
-  Serial.println(gsrThreshold);
+  pressureBaseline = pressureSum / 200;
+  emgBaseline = emgSum / 200;
+
+  Serial.print("Pressure baseline = ");
+  Serial.println(pressureBaseline);
+  Serial.print("EMG baseline = ");
+  Serial.println(emgBaseline);
 
   tensOff();
-  Serial.println("System initialized. Waiting for pressure trigger...");
+  Serial.println("System initialized. Waiting for simultaneous pressure + EMG change...");
 }
 
 void loop() {
   int pressureValue = analogRead(PRESSURE_PIN);
   int emgValue = analogRead(EMG_PIN);
 
-  Serial.print("Pressure=");
-  Serial.print(pressureValue);
-  Serial.print("\tEMG=");
-  Serial.println(emgValue);
+  int pressureDelta = abs(pressureValue - pressureBaseline);
+  int emgDelta = abs(emgValue - emgBaseline);
 
-  // 肌电变化检测
-  int temp = gsrThreshold - emgValue;
-  if (abs(temp) > EMG_CHANGE_THRESHOLD) {
-    int confirmValue = analogRead(EMG_PIN);
-    temp = gsrThreshold - confirmValue;
-    if (abs(temp) > EMG_CHANGE_THRESHOLD) {
-      digitalWrite(LED, HIGH);
-      Serial.println("EMG change detected!");
-      delay(3000);
-      digitalWrite(LED, LOW);
-      delay(1000);
-    }
+  if (pressureDelta > PRESSURE_CHANGE_THRESHOLD) {
+    pressureChanged = true;
+    pressureChangeTime = millis();
   }
 
-  // 压力触发 TENS
-  if (pressureValue >= PRESSURE_THRESHOLD && pressureArmed) {
-    pressureArmed = false;
-    Serial.println("Pressure threshold reached, starting TENS for 5 seconds");
+  if (emgDelta > EMG_CHANGE_THRESHOLD) {
+    emgChanged = true;
+    emgChangeTime = millis();
+  }
+
+  if (pressureChanged && (millis() - pressureChangeTime > CHANGE_WINDOW_MS)) {
+    pressureChanged = false;
+  }
+  if (emgChanged && (millis() - emgChangeTime > CHANGE_WINDOW_MS)) {
+    emgChanged = false;
+  }
+
+  Serial.print("Pressure=");
+  Serial.print(pressureValue);
+  Serial.print("\tPressureDelta=");
+  Serial.print(pressureDelta);
+  Serial.print("\tEMG=");
+  Serial.print(emgValue);
+  Serial.print("\tEMGDelta=");
+  Serial.println(emgDelta);
+
+  if (!tensBusy && pressureChanged && emgChanged) {
+    Serial.println("Pressure + EMG changed together, starting TENS for 5 seconds");
+    pressureChanged = false;
+    emgChanged = false;
     runTensFor5Seconds();
   }
 
-  if (pressureValue < PRESSURE_THRESHOLD - 20) {
-    pressureArmed = true;
-  }
-
-  delay(20);
+  delay(50);
 }

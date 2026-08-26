@@ -1,13 +1,15 @@
 #include <WiFi.h>
 #include <WebServer.h>
+#include <esp_wifi.h>
 
-const char* AP_SSID = "ESP32-Sensor";
+const char* AP_SSID = "ESP";
 const char* AP_PASSWORD = "12345678";
 
-// ESP32-C3 SuperMini 常用 ADC 引脚：GPIO0~GPIO4
-// 如果你的板子丝印是 A0/A1，请优先按 A0、A1 接线。
-const int PRESSURE_PIN = 0;
-const int EMG_PIN = 1;
+unsigned long lastStatusPrint = 0;
+
+// ESP32-C3 SuperMini 上尽量使用 ADC 可用且相对安全的引脚
+const int PRESSURE_PIN = 3;
+const int EMG_PIN = 2;
 
 WebServer server(80);
 
@@ -15,10 +17,6 @@ int pressureRawValue = 0;
 float pressureGrams = 0.0;
 int emgValue = 0;
 
-// 根据你的压力传感器分压电路进行校准：
-// 1. PRESSURE_RAW_NO_LOAD = 没有压力时的原始值
-// 2. PRESSURE_RAW_FULL_SCALE = 达到你设定最大重量时的原始值
-// 3. PRESSURE_MAX_GRAMS = 该原始值对应的最大重量（克）
 const int PRESSURE_RAW_NO_LOAD = 3800;
 const int PRESSURE_RAW_FULL_SCALE = 1200;
 const float PRESSURE_MAX_GRAMS = 1000.0;
@@ -27,7 +25,7 @@ int readAverage(int pin, int samples = 10) {
   long sum = 0;
   for (int i = 0; i < samples; i++) {
     sum += analogRead(pin);
-    delay(2);
+    delay(5);
   }
   return sum / samples;
 }
@@ -52,14 +50,15 @@ float rawToGrams(int raw) {
   return ratio * PRESSURE_MAX_GRAMS;
 }
 
-String buildPage() {
+String buildPage(int pRaw, float grams, int emg) {
   String page = R"rawliteral(
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>ESP32 Sensor Monitor</title>
+  <meta http-equiv='refresh' content='1'>
+  <title>ESP Sensor Monitor</title>
   <style>
     body {
       margin: 0;
@@ -137,80 +136,80 @@ String buildPage() {
 <body>
   <div class='wrap'>
     <div class='card'>
-      <h1>ESP32 传感器数据监测</h1>
-      
-      <div class='status' id='wifiStatus'>正在连接热点</div>
+      <h1>ESP 传感器数据监测</h1>
+      <p>请先连接热点 <b>ESP</b>，然后在浏览器打开 <b>192.168.4.1</b> 查看数据。</p>
+      <div class='status'>热点已启动</div>
       <div class='grid'>
         <div class='box'>
           <div class='label'>当前重量</div>
-          <div class='value'><span id='weight'>--</span><span class='unit'>g</span></div>
+          <div class='value'>{{GRAMS}}<span class='unit'>g</span></div>
         </div>
         <div class='box'>
           <div class='label'>压力传感器原始值</div>
-          <div class='value' id='pressureRaw'>--</div>
+          <div class='value'>{{PRAW}}</div>
         </div>
         <div class='box'>
           <div class='label'>肌电传感器原始值</div>
-          <div class='value' id='emg'>--</div>
+          <div class='value'>{{EMG}}</div>
         </div>
       </div>
+      <div class='small'>页面每 1 秒自动刷新一次。</div>
     </div>
   </div>
-  <script>
-    async function updateData() {
-      try {
-        const res = await fetch('/data');
-        const data = await res.json();
-        document.getElementById('weight').textContent = Number(data.weight_g).toFixed(1);
-        document.getElementById('pressureRaw').textContent = data.pressure_raw;
-        document.getElementById('emg').textContent = data.emg;
-        document.getElementById('wifiStatus').textContent = '已连接';
-      } catch (e) {
-        document.getElementById('wifiStatus').textContent = '数据获取失败';
-      }
-    }
-    updateData();
-    setInterval(updateData, 300);
-  </script>
 </body>
 </html>
 )rawliteral";
+  page.replace("{{GRAMS}}", String(grams, 1));
+  page.replace("{{PRAW}}", String(pRaw));
+  page.replace("{{EMG}}", String(emg));
   return page;
 }
 
 void handleRoot() {
-  server.send(200, "text/html; charset=utf-8", buildPage());
+  server.send(200, "text/html; charset=utf-8", buildPage(pressureRawValue, pressureGrams, emgValue));
 }
 
-void handleData() {
-  String json = "{";
-  json += "\"pressure_raw\":" + String(pressureRawValue) + ",";
-  json += "\"weight_g\":" + String(pressureGrams, 1) + ",";
-  json += "\"emg\":" + String(emgValue);
-  json += "}";
-  server.send(200, "application/json", json);
-}
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
+  delay(2500);
 
   analogReadResolution(12);
   analogSetPinAttenuation(PRESSURE_PIN, ADC_11db);
   analogSetPinAttenuation(EMG_PIN, ADC_11db);
 
+  WiFi.mode(WIFI_OFF);
+  delay(1000);
+
   WiFi.mode(WIFI_AP);
-  WiFi.softAP(AP_SSID, AP_PASSWORD);
+  delay(1000);
+
+  esp_wifi_set_max_tx_power(78);
+  delay(500);
+
+  bool ok = WiFi.softAP(AP_SSID, AP_PASSWORD);
+  delay(200);
+
+  WiFi.setSleep(false);
+  esp_wifi_set_ps(WIFI_PS_NONE);
+  esp_wifi_set_max_tx_power(40);
+  delay(200);
 
   Serial.println();
   Serial.println("ESP32 AP started");
+  Serial.print("softAP result: ");
+  Serial.println(ok ? "OK" : "FAIL");
   Serial.print("SSID: ");
   Serial.println(AP_SSID);
+  Serial.print("Password: ");
+  Serial.println(AP_PASSWORD);
   Serial.print("IP Address: ");
   Serial.println(WiFi.softAPIP());
+  Serial.print("MAC: ");
+  Serial.println(WiFi.softAPmacAddress());
 
   server.on("/", handleRoot);
-  server.on("/data", handleData);
+  server.onNotFound(handleRoot);
   server.begin();
 }
 
@@ -225,8 +224,21 @@ void loop() {
   Serial.print("\traw = ");
   Serial.print(pressureRawValue);
   Serial.print("\temg = ");
-  Serial.println(emgValue);
+  Serial.print(emgValue);
+
+  Serial.print("\tAP clients: ");
+  Serial.println(WiFi.softAPgetStationNum());
 
   server.handleClient();
-  delay(20);
+  delay(100);
+
+  if (millis() - lastStatusPrint >= 5000) {
+    lastStatusPrint = millis();
+    Serial.print("[STATUS] uptime = ");
+    Serial.print(millis() / 1000);
+    Serial.print(" s | mode = ");
+    Serial.print((int)WiFi.getMode());
+    Serial.print(" | AP clients = ");
+    Serial.println(WiFi.softAPgetStationNum());
+  }
 }
