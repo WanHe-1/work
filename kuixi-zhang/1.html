@@ -3,7 +3,8 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>ESP32 Sensor Monitor</title>
+  <meta http-equiv='refresh' content='1'>
+  <title>ESP Sensor Monitor</title>
   <style>
     body {
       margin: 0;
@@ -56,6 +57,12 @@
       color: #38bdf8;
       word-break: break-all;
     }
+    .unit {
+      font-size: 18px;
+      color: #7dd3fc;
+      margin-left: 6px;
+      font-weight: 600;
+    }
     .small {
       margin-top: 14px;
       font-size: 13px;
@@ -75,36 +82,25 @@
 <body>
   <div class='wrap'>
     <div class='card'>
-      <h1>ESP32 传感器数据监测</h1>
-      <p>请连接手机或电脑到 ESP32 热点 <b>ESP32-Sensor</b>，然后打开网页 <b>192.168.4.1</b> 查看实时数据。</p>
-      <div class='status' id='wifiStatus'>正在连接热点</div>
+      <h1>ESP 传感器数据监测</h1>
+      <p>请先连接热点 <b>ESP</b>，然后在浏览器打开 <b>192.168.4.1</b> 查看数据。</p>
+      <div class='status'>热点已启动</div>
       <div class='grid'>
         <div class='box'>
+          <div class='label'>当前重量</div>
+          <div class='value'>{{GRAMS}}<span class='unit'>g</span></div>
+        </div>
+        <div class='box'>
           <div class='label'>压力传感器原始值</div>
-          <div class='value' id='pressure'>--</div>
+          <div class='value'>{{PRAW}}</div>
         </div>
         <div class='box'>
           <div class='label'>肌电传感器原始值</div>
-          <div class='value' id='emg'>--</div>
+          <div class='value'>{{EMG}}</div>
         </div>
       </div>
-      <div class='small'>数据每 300ms 自动刷新一次。</div>
+      <div class='small'>页面每 1 秒自动刷新一次。</div>
     </div>
   </div>
-  <script>
-    async function updateData() {
-      try {
-        const res = await fetch('/data');
-        const data = await res.json();
-        document.getElementById('pressure').textContent = data.pressure;
-        document.getElementById('emg').textContent = data.emg;
-        document.getElementById('wifiStatus').textContent = '热点已连接';
-      } catch (e) {
-        document.getElementById('wifiStatus').textContent = '数据获取失败';
-      }
-    }
-    updateData();
-    setInterval(updateData, 300);
-  </script>
 </body>
 </html>
