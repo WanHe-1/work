@@ -1,0 +1,52 @@
+#include <Adafruit_NeoPixel.h>
+
+#define LED_PIN    9
+#define LED_COUNT  173
+
+#define SPEED      30
+#define TAIL       5
+
+Adafruit_NeoPixel strip(
+  LED_COUNT,
+  LED_PIN,
+  NEO_GRB + NEO_KHZ800
+);
+
+void setup() {
+  strip.begin();
+  strip.setBrightness(100);
+  strip.clear();
+  strip.show();
+}
+
+void loop() {
+
+  for (int i = 0; i < LED_COUNT; i++) {
+
+    strip.clear();
+
+    // 流水尾巴
+    for (int j = 0; j < TAIL; j++) {
+
+      int pos = i - j;
+
+      if (pos >= 0 && pos < LED_COUNT) {
+
+        // 越靠近尾部越暗
+        uint8_t brightness =
+          255 - (j * (255 / TAIL));
+
+        strip.setPixelColor(
+          pos,
+          brightness * 80 / 255,
+          brightness * 180 / 255,
+          brightness * 255 / 255
+        );
+      }
+    }
+
+    strip.show();
+
+    delay(SPEED);
+  }
+}
