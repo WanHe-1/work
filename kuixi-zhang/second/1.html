@@ -1,0 +1,39 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  color:#111;
+  font-family:Arial,sans-serif;
+}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#ir{
+  font-size:clamp(48px,15vw,100px);
+  font-weight:400;
+  font-variant-numeric:tabular-nums;
+}
+</style>
+</head>
+<body>
+<div id="ir">0</div>
+<script>
+async function updateIR(){
+  try{
+    const response = await fetch('/ir',{cache:'no-store'});
+    const value = await response.text();
+    document.getElementById('ir').textContent = value;
+  }catch(e){}
+}
+updateIR();
+setInterval(updateIR,200);
+</script>
+</body>
+</html>
