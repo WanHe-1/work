@@ -13,24 +13,19 @@
 #define LED_TYPE      WS2812B
 #define COLOR_ORDER   GRB
 
-// ===== IR 触发参数 =====
 #define IR_THRESHOLD  10000UL
 
-// ===== 灯带亮度与渐变 =====
 #define MAX_BRIGHTNESS 160
 #define FADE_STEP      2
 #define FADE_INTERVAL  12
 
-// ===== Wi-Fi 热点 =====
 const char* AP_SSID = "IR-Monitor";
 const char* AP_PASS = "12345678";
 
-// ===== 对象 =====
 MAX30105 particleSensor;
 ESP8266WebServer server(80);
 CRGB leds[LED_COUNT];
 
-// ===== 实时数据 =====
 uint32_t irValue = 0;
 uint8_t currentBrightness = 0;
 uint8_t targetBrightness = 0;
@@ -40,7 +35,6 @@ unsigned long lastSampleTime = 0;
 
 const CRGB WARM_WHITE = CRGB(255, 180, 100);
 
-// ===== 网页：仅显示 IR 数值 =====
 const char webpage[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -98,26 +92,22 @@ void handleIR() {
 void setup() {
   Serial.begin(115200);
 
-  // 初始化 I2C
   Wire.begin(SDA_PIN, SCL_PIN);
   Wire.setClock(400000);
 
-  // 初始化灯带
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(
     leds, LED_COUNT
   );
   FastLED.setBrightness(0);
   FastLED.clear(true);
 
-  // 初始化 MAX30102
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
-    // 不输出额外串口信息，避免干扰绘图仪
+  
     while (true) {
       delay(1000);
     }
   }
 
-  // 采集原始 IR
   byte ledBrightness = 60;
   byte sampleAverage = 4;
   byte ledMode = 2;
@@ -134,11 +124,9 @@ void setup() {
     adcRange
   );
 
-  // 创建 Wi-Fi 热点
   WiFi.mode(WIFI_AP);
   WiFi.softAP(AP_SSID, AP_PASS);
 
-  // 注册网页
   server.on("/", HTTP_GET, handleRoot);
   server.on("/ir", HTTP_GET, handleIR);
   server.begin();
@@ -147,24 +135,20 @@ void setup() {
 void loop() {
   server.handleClient();
 
-  // 读取最新 IR 数据
   if (particleSensor.available()) {
     irValue = particleSensor.getIR();
     particleSensor.nextSample();
   }
 
-  // 串口绘图仪：仅输出 IR 数值
   unsigned long now = millis();
   if (now - lastSampleTime >= 20) {
     lastSampleTime = now;
     Serial.println(irValue);
   }
 
-  // 根据阈值设置目标亮度
   targetBrightness =
     (irValue >= IR_THRESHOLD) ? MAX_BRIGHTNESS : 0;
 
-  // 缓慢渐亮 / 渐灭
   if (now - lastFadeTime >= FADE_INTERVAL) {
     lastFadeTime = now;
 
