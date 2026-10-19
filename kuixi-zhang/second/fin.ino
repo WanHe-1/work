@@ -1,178 +1,147 @@
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
+/*
+  Optical Heart Rate Detection (PBA Algorithm) using the MAX30105 Breakout
+  By: Nathan Seidle @ SparkFun Electronics
+  Date: October 2nd, 2016
+  https://github.com/sparkfun/MAX30105_Breakout
+
+  This is a demo to show the reading of heart rate or beats per minute (BPM) using
+  a Penpheral Beat Amplitude (PBA) algorithm.
+
+  Hardware Connections:
+  MAX30102:
+  - VIN = 3.3V or supported supply voltage
+  - GND = GND
+  - SDA = D2 (GPIO4, ESP8266)
+  - SCL = D1 (GPIO5, ESP8266)
+
+  RGB LED Strip:
+  - DIN = D5 (GPIO14, ESP8266)
+  - 5V = External 5V power supply
+  - GND = Common GND
+*/
+
 #include <Wire.h>
-#include <MAX30105.h>
-#include <FastLED.h>
+#include "MAX30105.h"
+#include "heartRate.h"
+#include <Adafruit_NeoPixel.h>
 
-// ===== 引脚与灯带参数 =====
-#define SDA_PIN       4       // D2
-#define SCL_PIN       5       // D1
-#define LED_PIN       14      // D5
-#define LED_COUNT     160
-#define LED_TYPE      WS2812B
-#define COLOR_ORDER   GRB
-
-#define IR_THRESHOLD  10000UL
-
-#define MAX_BRIGHTNESS 160
-#define FADE_STEP      2
-#define FADE_INTERVAL  12
-
-const char* AP_SSID = "IR-Monitor";
-const char* AP_PASS = "12345678";
+// ===== MAX30102 =====
+#define SDA_PIN D2
+#define SCL_PIN D1
 
 MAX30105 particleSensor;
-ESP8266WebServer server(80);
-CRGB leds[LED_COUNT];
 
-uint32_t irValue = 0;
-uint8_t currentBrightness = 0;
-uint8_t targetBrightness = 0;
+const byte RATE_SIZE = 4; //Increase this for more averaging. 4 is good.
+byte rates[RATE_SIZE]; //Array of heart rates
+byte rateSpot = 0;
+long lastBeat = 0; //Time at which the last beat occurred
 
+float beatsPerMinute;
+int beatAvg;
+
+// ===== RGB LED Strip =====
+#define LED_PIN D5
+#define LED_COUNT 160
+#define IR_THRESHOLD 10000
+
+#define MAX_BRIGHTNESS 160
+#define FADE_STEP 2
+#define FADE_INTERVAL 12
+
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+int currentBrightness = 0;
+int targetBrightness = 0;
 unsigned long lastFadeTime = 0;
-unsigned long lastSampleTime = 0;
 
-const CRGB WARM_WHITE = CRGB(255, 180, 100);
-
-const char webpage[] PROGMEM = R"rawliteral(
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-html,body{
-  margin:0;
-  width:100%;
-  height:100%;
-  background:#fff;
-  color:#111;
-  font-family:Arial,sans-serif;
-}
-body{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-#ir{
-  font-size:clamp(48px,15vw,100px);
-  font-weight:400;
-  font-variant-numeric:tabular-nums;
-}
-</style>
-</head>
-<body>
-<div id="ir">0</div>
-<script>
-async function updateIR(){
-  try{
-    const response = await fetch('/ir',{cache:'no-store'});
-    const value = await response.text();
-    document.getElementById('ir').textContent = value;
-  }catch(e){}
-}
-updateIR();
-setInterval(updateIR,200);
-</script>
-</body>
-</html>
-)rawliteral";
-
-void handleRoot() {
-  server.send_P(200, "text/html; charset=utf-8", webpage);
-}
-
-void handleIR() {
-  server.sendHeader("Cache-Control", "no-store");
-  server.send(200, "text/plain; charset=utf-8",
-              String(irValue));
-}
-
-void setup() {
+void setup()
+{
   Serial.begin(115200);
 
+  // Initialize sensor
   Wire.begin(SDA_PIN, SCL_PIN);
-  Wire.setClock(400000);
 
-  FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(
-    leds, LED_COUNT
-  );
-  FastLED.setBrightness(0);
-  FastLED.clear(true);
-
-  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
-  
-    while (true) {
-      delay(1000);
-    }
+  if (!particleSensor.begin(Wire, I2C_SPEED_FAST))
+  {
+    while (1);
   }
 
-  byte ledBrightness = 60;
-  byte sampleAverage = 4;
-  byte ledMode = 2;
-  int sampleRate = 100;
-  int pulseWidth = 411;
-  int adcRange = 16384;
+  particleSensor.setup(); //Configure sensor with default settings
+  particleSensor.setPulseAmplitudeRed(0x0A); //Turn Red LED to low to indicate sensor is running
+  particleSensor.setPulseAmplitudeGreen(0); //Turn off Green LED
 
-  particleSensor.setup(
-    ledBrightness,
-    sampleAverage,
-    ledMode,
-    sampleRate,
-    pulseWidth,
-    adcRange
-  );
+  // Initialize RGB LED strip
+  strip.begin();
+  strip.setBrightness(0);
+  strip.clear();
+  strip.show();
 
-  WiFi.mode(WIFI_AP);
-  WiFi.softAP(AP_SSID, AP_PASS);
-
-  server.on("/", HTTP_GET, handleRoot);
-  server.on("/ir", HTTP_GET, handleIR);
-  server.begin();
+  // Set warm white color
+  for (int i = 0; i < LED_COUNT; i++)
+  {
+    strip.setPixelColor(i, strip.Color(255, 180, 100));
+  }
+  strip.show();
 }
 
-void loop() {
-  server.handleClient();
+void loop()
+{
+  long irValue = particleSensor.getIR();
 
-  if (particleSensor.available()) {
-    irValue = particleSensor.getIR();
-    particleSensor.nextSample();
+  if (checkForBeat(irValue) == true)
+  {
+    //We sensed a beat!
+    long delta = millis() - lastBeat;
+    lastBeat = millis();
+
+    beatsPerMinute = 60 / (delta / 1000.0);
+
+    if (beatsPerMinute < 255 && beatsPerMinute > 20)
+    {
+      rates[rateSpot++] = (byte)beatsPerMinute; //Store this reading in the array
+      rateSpot %= RATE_SIZE; //Wrap variable
+
+      //Take average of readings
+      beatAvg = 0;
+      for (byte x = 0; x < RATE_SIZE; x++)
+        beatAvg += rates[x];
+      beatAvg /= RATE_SIZE;
+    }
   }
 
+  // Only output IR value for Serial Plotter
+  Serial.println(irValue);
+
+  // Control RGB LED strip according to IR value
+  if (irValue > IR_THRESHOLD)
+    targetBrightness = MAX_BRIGHTNESS;
+  else
+    targetBrightness = 0;
+
+  // Smooth fade in and fade out
   unsigned long now = millis();
-  if (now - lastSampleTime >= 20) {
-    lastSampleTime = now;
-    Serial.println(irValue);
-  }
 
-  targetBrightness =
-    (irValue >= IR_THRESHOLD) ? MAX_BRIGHTNESS : 0;
-
-  if (now - lastFadeTime >= FADE_INTERVAL) {
+  if (now - lastFadeTime >= FADE_INTERVAL)
+  {
     lastFadeTime = now;
 
-    if (currentBrightness < targetBrightness) {
-      currentBrightness =
-        min((int)currentBrightness + FADE_STEP,
-            (int)targetBrightness);
-    } else if (currentBrightness > targetBrightness) {
-      currentBrightness =
-        max((int)currentBrightness - FADE_STEP,
-            (int)targetBrightness);
+    if (currentBrightness < targetBrightness)
+    {
+      currentBrightness += FADE_STEP;
+
+      if (currentBrightness > targetBrightness)
+        currentBrightness = targetBrightness;
+    }
+    else if (currentBrightness > targetBrightness)
+    {
+      currentBrightness -= FADE_STEP;
+
+      if (currentBrightness < targetBrightness)
+        currentBrightness = targetBrightness;
     }
 
-    // 只在亮度变化时更新灯带
-    static uint8_t previousBrightness = 255;
-
-    if (currentBrightness != previousBrightness) {
-      previousBrightness = currentBrightness;
-
-      fill_solid(leds, LED_COUNT, WARM_WHITE);
-      FastLED.setBrightness(currentBrightness);
-      FastLED.show();
-    }
+    strip.setBrightness(currentBrightness);
+    strip.show();
   }
-
-  yield();
 }

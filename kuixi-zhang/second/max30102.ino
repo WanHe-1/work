@@ -16,6 +16,7 @@ void setup()
   
   Serial.println("Initializing...");
 
+  //   初始化传感器
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) //   默认使用I2C，400KHZ频率
   {
     Serial.println("MAX30105 was not found. Please check wiring/power. ");
