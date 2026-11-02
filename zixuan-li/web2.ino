@@ -1,23 +1,17 @@
-/******************************************************************************
- * 无锡市思知瑞科技有限公司
- * 淘宝店铺：大脑实验室
- * 店铺网址：http://brainlab.taobao.com
- * 工作日联系电话：0510-66759621
-******************************************************************************/
+
 #include <Arduino.h>
 #include <Adafruit_SSD1306.h>
 
 #define OLED_Address 0x3C
 Adafruit_SSD1306 oled(128, 64);
 
-#define DEBUG  //取消注释，在上位机显示
-
-typedef struct  // 曲线参数
+#define DEBUG  
+typedef struct
 {
-  float Draw_Buf[128];  // 曲线数据缓存
-  float Draw_Min;       // 缓存数据的最小值  单位为百分比
-  float Draw_Max;       // 缓存数据的最大值
-} _DrawCurve;           // 曲线参数
+  float Draw_Buf[128]; 
+  float Draw_Min;    
+  float Draw_Max;       
+} _DrawCurve;          
 
 static _DrawCurve DrawCurve;
 
@@ -32,12 +26,6 @@ void PlotDataInput(_DrawCurve *Draw, float val) {
     Draw->Draw_Buf[127] = 1;
   else if (Draw->Draw_Buf[127] < 0)
     Draw->Draw_Buf[127] = 0;
-/******************************************************************************
- * 无锡市思知瑞科技有限公司
- * 淘宝店铺：大脑实验室
- * 店铺网址：http://brainlab.taobao.com
- * 工作日联系电话：0510-66759621
-******************************************************************************/
   Draw->Draw_Max = 0;
   Draw->Draw_Min = 1;
   for (i = 0; i < 128; i++)  // 获取最大最小范围
@@ -100,9 +88,3 @@ void loop() {
   delay(5);
 #endif
 }
-/******************************************************************************
- * 无锡市思知瑞科技有限公司
- * 淘宝店铺：大脑实验室
- * 店铺网址：http://brainlab.taobao.com
- * 工作日联系电话：0510-66759621
-******************************************************************************/

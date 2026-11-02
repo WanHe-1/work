@@ -30,7 +30,7 @@ void setup() {
     Serial.println("Start...");
 }
 
-void loop() {
+void loop() {   
     // GSR
     gsrValue = analogRead(GSR);
 
