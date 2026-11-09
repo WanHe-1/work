@@ -7,7 +7,7 @@ unsigned long startTime = 0;
 // 标记定时器是否正在运行
 bool isTimerRunning = false;
 // 20秒的毫秒数 (20 * 1000)
-const long duration = 20000; 
+const long duration = 30000; 
 
 void setup() {
   // 初始化串口通信，波特率设置为9600

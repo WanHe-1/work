@@ -2,8 +2,7 @@
 import serial
 from pynput import keyboard
 
-# 修改为 Arduino 实际连接的串口号
-PORT = "COM14"
+PORT = "COM9"
 BAUD_RATE = 9600
 
 # 连接 Arduino
